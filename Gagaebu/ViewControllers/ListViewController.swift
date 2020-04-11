@@ -34,7 +34,8 @@ class ListViewController: BaseViewController, View {
     }
 
     let tableView = UITableView().then {
-        $0.rowHeight = 70
+        $0.rowHeight = 90
+        $0.separatorStyle = .none
         $0.register(Reusable.listItemCell)
     }
     let addButton = UIBarButtonItem(title: "추가", style: .plain, target: self, action: nil)

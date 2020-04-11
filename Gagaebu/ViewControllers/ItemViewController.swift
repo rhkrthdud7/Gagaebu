@@ -22,18 +22,22 @@ class ItemViewController: BaseViewController, ReactorKit.View {
         $0.insertSegment(withTitle: Transaction.outcome.title, at: 0, animated: false)
         $0.selectedSegmentIndex = 0
     }
-    lazy var textFieldDate = InputTextField().then {
+    lazy var textFieldDate = BorderedTextField().then {
         $0.inputView = datePicker
     }
     let datePicker = UIDatePicker().then {
         $0.datePickerMode = .date
         $0.date = Date()
     }
-    let textFieldCost = InputTextField().then {
+    let textFieldCost = BorderedTextField().then {
         $0.keyboardType = .numberPad
     }
-    let textFieldTitle = InputTextField()
-    let buttonAdd = UIButton(type: .system)
+    let textFieldTitle = BorderedTextField()
+    let buttonAdd = UIButton(type: .system).then {
+        $0.layer.cornerRadius = 15
+        $0.backgroundColor = $0.tintColor
+        $0.setTitleColor(.white, for: .normal)
+    }
 
     init(reactor: ItemViewReactor) {
         super.init()
@@ -87,6 +91,7 @@ class ItemViewController: BaseViewController, ReactorKit.View {
         textFieldDate.snp.makeConstraints {
             $0.top.equalTo(labelDate.snp.bottom).offset(8)
             $0.leading.trailing.equalToSuperview().inset(16)
+            $0.height.equalTo(50)
         }
 
         let labelCost = UILabel().then {
@@ -101,6 +106,7 @@ class ItemViewController: BaseViewController, ReactorKit.View {
         textFieldCost.snp.makeConstraints {
             $0.top.equalTo(labelCost.snp.bottom).offset(8)
             $0.leading.trailing.equalToSuperview().inset(16)
+            $0.height.equalTo(50)
         }
 
         let labelTitle = UILabel().then {
@@ -115,6 +121,7 @@ class ItemViewController: BaseViewController, ReactorKit.View {
         textFieldTitle.snp.makeConstraints {
             $0.top.equalTo(labelTitle.snp.bottom).offset(8)
             $0.leading.trailing.equalToSuperview().inset(16)
+            $0.height.equalTo(50)
         }
 
         viewContent.addSubview(buttonAdd)
@@ -182,7 +189,15 @@ class ItemViewController: BaseViewController, ReactorKit.View {
 
         reactor.state.asObservable()
             .map { $0.isSubmitButtonEnabled }
-            .bind(to: buttonAdd.rx.isEnabled)
+            .subscribe(onNext: { [weak self] isEnabled in
+                guard let self = self else { return }
+                if isEnabled {
+                    self.buttonAdd.backgroundColor = self.buttonAdd.tintColor
+                } else {
+                    self.buttonAdd.backgroundColor = .lightGray
+                }
+                self.buttonAdd.isEnabled = isEnabled
+            })
             .disposed(by: disposeBag)
 
         reactor.state.asObservable()

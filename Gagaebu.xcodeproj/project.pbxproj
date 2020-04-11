@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		176DC6D703FA85210004A2A8 /* libPods-Gagaebu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5432E083104C2D2E16A698 /* libPods-Gagaebu.a */; };
 		9C16D724243836AF00F226AD /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16D723243836AF00F226AD /* Date+.swift */; };
-		9C16D72924383CF600F226AD /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16D72824383CF600F226AD /* InputTextField.swift */; };
+		9C16D72924383CF600F226AD /* BorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16D72824383CF600F226AD /* BorderedTextField.swift */; };
 		9C8CB236243C0ABD00CC851A /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CB235243C0ABD00CC851A /* ItemService.swift */; };
 		9C8FBC632441997500764E3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8FBC622441997500764E3A /* SceneDelegate.swift */; };
 		9C8FBC662441B0AB00764E3A /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8FBC642441B0AB00764E3A /* ListItemCell.swift */; };
 		9C8FBC692441B4FF00764E3A /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8FBC682441B4FF00764E3A /* BaseTableViewCell.swift */; };
 		9C8FBC6C2441BACD00764E3A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8FBC6B2441BACD00764E3A /* BaseViewController.swift */; };
 		9C8FBC6E2441C20F00764E3A /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8FBC6D2441C20F00764E3A /* Int+.swift */; };
+		9C8FBC702441E8B400764E3A /* CALayer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8FBC6F2441E8B400764E3A /* CALayer+.swift */; };
+		9C8FBC722441EB3000764E3A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C8FBC712441EB3000764E3A /* Colors.xcassets */; };
+		9C8FBC742441EB7300764E3A /* Colors+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8FBC732441EB7300764E3A /* Colors+.swift */; };
 		9CEDC73C2425CA37006DD872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEDC73B2425CA37006DD872 /* AppDelegate.swift */; };
 		9CEDC7402425CA37006DD872 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEDC73F2425CA37006DD872 /* ListViewController.swift */; };
 		9CEDC7452425CA38006DD872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CEDC7442425CA38006DD872 /* Assets.xcassets */; };
@@ -29,13 +32,16 @@
 /* Begin PBXFileReference section */
 		0E40F9E371818118EAA07B26 /* Pods-Gagaebu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gagaebu.release.xcconfig"; path = "Target Support Files/Pods-Gagaebu/Pods-Gagaebu.release.xcconfig"; sourceTree = "<group>"; };
 		9C16D723243836AF00F226AD /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
-		9C16D72824383CF600F226AD /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
+		9C16D72824383CF600F226AD /* BorderedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedTextField.swift; sourceTree = "<group>"; };
 		9C8CB235243C0ABD00CC851A /* ItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
 		9C8FBC622441997500764E3A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9C8FBC642441B0AB00764E3A /* ListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
 		9C8FBC682441B4FF00764E3A /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		9C8FBC6B2441BACD00764E3A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		9C8FBC6D2441C20F00764E3A /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
+		9C8FBC6F2441E8B400764E3A /* CALayer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+.swift"; sourceTree = "<group>"; };
+		9C8FBC712441EB3000764E3A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		9C8FBC732441EB7300764E3A /* Colors+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors+.swift"; sourceTree = "<group>"; };
 		9CEDC7382425CA37006DD872 /* Gagaebu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gagaebu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEDC73B2425CA37006DD872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CEDC73F2425CA37006DD872 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +90,8 @@
 			children = (
 				9C16D723243836AF00F226AD /* Date+.swift */,
 				9C8FBC6D2441C20F00764E3A /* Int+.swift */,
+				9C8FBC6F2441E8B400764E3A /* CALayer+.swift */,
+				9C8FBC732441EB7300764E3A /* Colors+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -91,7 +99,7 @@
 		9C16D72724383CE200F226AD /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				9C16D72824383CF600F226AD /* InputTextField.swift */,
+				9C16D72824383CF600F226AD /* BorderedTextField.swift */,
 				9CF0F42A2438696000279CF9 /* ResizableCollectionView.swift */,
 			);
 			path = Custom;
@@ -146,6 +154,7 @@
 				9CEDC73B2425CA37006DD872 /* AppDelegate.swift */,
 				9C8FBC622441997500764E3A /* SceneDelegate.swift */,
 				9CEDC7442425CA38006DD872 /* Assets.xcassets */,
+				9C8FBC712441EB3000764E3A /* Colors.xcassets */,
 				9CEDC7462425CA38006DD872 /* LaunchScreen.storyboard */,
 				9CEDC7492425CA38006DD872 /* Info.plist */,
 			);
@@ -221,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8FBC722441EB3000764E3A /* Colors.xcassets in Resources */,
 				9CEDC7482425CA38006DD872 /* LaunchScreen.storyboard in Resources */,
 				9CEDC7452425CA38006DD872 /* Assets.xcassets in Resources */,
 			);
@@ -263,14 +273,16 @@
 				9C8FBC6E2441C20F00764E3A /* Int+.swift in Sources */,
 				9CF0F4302439D0DA00279CF9 /* ItemViewReactor.swift in Sources */,
 				9CEDC7602425D2D9006DD872 /* ItemViewController.swift in Sources */,
+				9C8FBC742441EB7300764E3A /* Colors+.swift in Sources */,
 				9CEDC73C2425CA37006DD872 /* AppDelegate.swift in Sources */,
 				9C8FBC6C2441BACD00764E3A /* BaseViewController.swift in Sources */,
 				9CF0F42B2438696100279CF9 /* ResizableCollectionView.swift in Sources */,
 				9CF0F42E2439D09B00279CF9 /* ListViewReactor.swift in Sources */,
 				9C8FBC662441B0AB00764E3A /* ListItemCell.swift in Sources */,
-				9C16D72924383CF600F226AD /* InputTextField.swift in Sources */,
+				9C16D72924383CF600F226AD /* BorderedTextField.swift in Sources */,
 				9C16D724243836AF00F226AD /* Date+.swift in Sources */,
 				9C8FBC692441B4FF00764E3A /* BaseTableViewCell.swift in Sources */,
+				9C8FBC702441E8B400764E3A /* CALayer+.swift in Sources */,
 				9C8FBC632441997500764E3A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

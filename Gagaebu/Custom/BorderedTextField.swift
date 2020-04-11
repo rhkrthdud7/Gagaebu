@@ -1,5 +1,5 @@
 //
-//  InputTextField.swift
+//  BorderedTextField.swift
 //  Gagaebu
 //
 //  Created by Soso on 04/04/2020.
@@ -8,9 +8,7 @@
 
 import UIKit
 
-class InputTextField: UITextField {
-    final let height: CGFloat = 50
-
+class BorderedTextField: UITextField {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
@@ -24,17 +22,13 @@ class InputTextField: UITextField {
     }
 
     func setupViews() {
-        let viewInset = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 15, height: height)))
+        let viewInset = UIView(frame: CGRect(origin: .zero, size: CGSize(width: 15, height: 0)))
         leftView = viewInset
         leftViewMode = .always
     }
 
-    override var intrinsicContentSize: CGSize {
-        return CGSize(width: bounds.width, height: height)
-    }
-
     override func draw(_ rect: CGRect) {
-        let path = UIBezierPath(rect: bounds)
+        let path = UIBezierPath(roundedRect: bounds.insetBy(dx: 1, dy: 1), cornerRadius: 15)
         UIColor.lightGray.setStroke()
         path.lineWidth = 0.5
         path.stroke()
