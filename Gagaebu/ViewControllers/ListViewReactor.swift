@@ -21,22 +21,26 @@ final class ListViewReactor: Reactor {
     }
 
     enum Action {
-        case refresh
+        case refresh(Transaction)
     }
 
     enum Mutation {
         case setItems([Item])
+        case setTransaction(Transaction)
     }
 
     struct State {
         var items: [Item] = []
+        var transaction: Transaction = .outcome
     }
 
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-        case .refresh:
-            return itemService.fetchItems()
+        case .refresh(let transaction):
+            let update = Observable.just(Mutation.setTransaction(transaction))
+            let set = itemService.fetchItems(.transaction(transaction))
                 .map { Mutation.setItems($0) }
+            return Observable.concat([set, update])
         }
     }
 
@@ -45,6 +49,8 @@ final class ListViewReactor: Reactor {
         switch mutation {
         case .setItems(let items):
             newState.items = items
+        case .setTransaction(let transaction):
+            newState.transaction = transaction
         }
         return newState
     }

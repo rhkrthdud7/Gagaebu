@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -28,8 +29,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tab = UITabBarController()
         tab.setViewControllers([nav], animated: false)
         tab.tabBar.items?[0].image = #imageLiteral(resourceName: "icon_list_tab")
+        tab.tabBar.isTranslucent = false
         window.rootViewController = tab
         window.makeKeyAndVisible()
+
+        let config = Realm.Configuration(
+            schemaVersion: 1,
+            migrationBlock: { migration, oldSchemaVersion in
+                if (oldSchemaVersion < 1) {
+                    
+                }
+            })
+        Realm.Configuration.defaultConfiguration = config
 
         self.window = window
     }

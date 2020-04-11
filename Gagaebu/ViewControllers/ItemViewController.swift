@@ -17,6 +17,11 @@ import SnapKit
 import Then
 
 class ItemViewController: BaseViewController, ReactorKit.View {
+    let segmentedControl = UISegmentedControl().then {
+        $0.insertSegment(withTitle: Transaction.income.title, at: 0, animated: false)
+        $0.insertSegment(withTitle: Transaction.outcome.title, at: 0, animated: false)
+        $0.selectedSegmentIndex = 0
+    }
     lazy var textFieldDate = InputTextField().then {
         $0.inputView = datePicker
     }
@@ -44,13 +49,13 @@ class ItemViewController: BaseViewController, ReactorKit.View {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setup()
-    }
-
-    func setup() {
         view.backgroundColor = .systemBackground
-
-        let scrollView = UIScrollView()
+    }
+    
+    override func setupConstraints() {
+        let scrollView = UIScrollView().then {
+            $0.alwaysBounceVertical = true
+        }
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints {
             $0.edges.equalToSuperview()
@@ -65,12 +70,18 @@ class ItemViewController: BaseViewController, ReactorKit.View {
             $0.width.equalTo(view)
         }
 
+        viewContent.addSubview(segmentedControl)
+        segmentedControl.snp.makeConstraints {
+            $0.top.leading.trailing.equalToSuperview().inset(16)
+        }
+
         let labelDate = UILabel().then {
             $0.text = "날짜"
         }
         viewContent.addSubview(labelDate)
         labelDate.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview().inset(20)
+            $0.top.equalTo(segmentedControl.snp.bottom).offset(16)
+            $0.leading.trailing.equalToSuperview().inset(20)
         }
         viewContent.addSubview(textFieldDate)
         textFieldDate.snp.makeConstraints {
@@ -145,6 +156,14 @@ class ItemViewController: BaseViewController, ReactorKit.View {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
 
+        segmentedControl.rx.controlEvent(.valueChanged)
+            .withLatestFrom(segmentedControl.rx.selectedSegmentIndex)
+            .map(Transaction.init)
+            .filterNil()
+            .map(Reactor.Action.updateTransaction)
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
         reactor.state.asObservable().map { $0.title }
             .distinctUntilChanged()
             .bind(to: navigationItem.rx.title)
@@ -175,6 +194,12 @@ class ItemViewController: BaseViewController, ReactorKit.View {
             .map { $0.itemTitle }
             .bind(to: textFieldTitle.rx.text)
             .disposed(by: disposeBag)
+
+        reactor.state.asObservable()
+            .map { $0.transaction.rawValue }
+            .take(1)
+            .bind(to: segmentedControl.rx.selectedSegmentIndex)
+            .dispose()
 
         reactor.state.asObservable()
             .map { $0.shouldPop }

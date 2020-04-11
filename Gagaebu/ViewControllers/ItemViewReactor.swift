@@ -11,7 +11,7 @@ import ReactorKit
 import RxSwift
 
 enum ItemMode {
-    case new
+    case new(Transaction)
     case edit(Item)
 }
 
@@ -25,10 +25,10 @@ final class ItemViewReactor: Reactor {
         self.mode = mode
 
         switch mode {
-        case .new:
-            self.initialState = State(title: "New", buttonTitle: "추가")
+        case .new(let transaction):
+            self.initialState = State(title: "New", buttonTitle: "추가", transaction: transaction)
         case .edit(let item):
-            self.initialState = State(title: "Edit", buttonTitle: "수정", itemTitle: item.title, itemCost: item.cost, itemDate: item.date, isSubmitButtonEnabled: true)
+            self.initialState = State(title: "Edit", buttonTitle: "수정", itemTitle: item.title, itemCost: item.cost, itemDate: item.date, transaction: item.transaction, isSubmitButtonEnabled: true)
         }
     }
 
@@ -36,6 +36,7 @@ final class ItemViewReactor: Reactor {
         case updateDate(Date)
         case updateCost(String)
         case updateTitle(String)
+        case updateTransaction(Transaction)
         case pressSubmit
     }
 
@@ -43,6 +44,7 @@ final class ItemViewReactor: Reactor {
         case setDate(Date)
         case setCost(String)
         case setTitle(String)
+        case setTransaction(Transaction)
         case pop
     }
 
@@ -52,6 +54,7 @@ final class ItemViewReactor: Reactor {
         var itemTitle: String
         var itemCost: Int
         var itemDate: Date
+        var transaction: Transaction
         var isSubmitButtonEnabled: Bool
         var shouldPop: Bool
 
@@ -61,6 +64,7 @@ final class ItemViewReactor: Reactor {
             itemTitle: String = "",
             itemCost: Int = 0,
             itemDate: Date = Date(),
+            transaction: Transaction,
             isSubmitButtonEnabled: Bool = false
         ) {
             self.title = title
@@ -70,6 +74,7 @@ final class ItemViewReactor: Reactor {
             self.itemDate = itemDate
             self.isSubmitButtonEnabled = isSubmitButtonEnabled
             self.shouldPop = false
+            self.transaction = transaction
         }
     }
 
@@ -81,15 +86,17 @@ final class ItemViewReactor: Reactor {
             return Observable.just(Mutation.setCost(cost))
         case .updateDate(let date):
             return Observable.just(Mutation.setDate(date))
+        case .updateTransaction(let transaction):
+            return Observable.just(Mutation.setTransaction(transaction))
         case .pressSubmit:
             switch mode {
             case .new:
                 return itemService
-                    .create(title: currentState.itemTitle, cost: currentState.itemCost, date: currentState.itemDate)
+                    .create(currentState.itemTitle, currentState.itemCost, currentState.itemDate, currentState.transaction)
                     .map { Mutation.pop }
             case .edit(let item):
                 return itemService
-                    .update(id: item.id, title: currentState.itemTitle, cost: currentState.itemCost, date: currentState.itemDate)
+                    .update(item.id, currentState.itemTitle, currentState.itemCost, currentState.itemDate, currentState.transaction)
                     .map { Mutation.pop }
             }
         }
@@ -108,6 +115,8 @@ final class ItemViewReactor: Reactor {
             }
         case .setDate(let date):
             newState.itemDate = min(date, Date())
+        case .setTransaction(let transaction):
+            newState.transaction = transaction
         case .pop:
             newState.shouldPop = true
         }

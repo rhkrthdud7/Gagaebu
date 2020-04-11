@@ -10,22 +10,27 @@ import Foundation
 import RealmSwift
 import RxSwift
 
+enum ItemPredicate {
+    case transaction(Transaction)
+}
+
 protocol ItemServiceType {
-    func fetchItems() -> Observable<[Item]>
-    func create(title: String, cost: Int, date: Date) -> Observable<Void>
-    func update(id: String, title: String, cost: Int, date: Date) -> Observable<Void>
+    func fetchItems(_ predicate: ItemPredicate) -> Observable<[Item]>
+    func create(_ title: String, _ cost: Int, _ date: Date, _ transaction: Transaction) -> Observable<Void>
+    func update(_ id: String, _ title: String, _ cost: Int, _ date: Date, _ transaction: Transaction) -> Observable<Void>
 }
 
 class ItemService: ItemServiceType {
-    func fetchItems() -> Observable<[Item]> {
+    func fetchItems(_ predicate: ItemPredicate) -> Observable<[Item]> {
         let realm = try! Realm()
         let items = realm.objects(Item.self)
             .sorted(byKeyPath: "date", ascending: false)
+            .filter(predicate: predicate)
         return Observable.just(items.toArray(ofType: Item.self))
     }
 
-    func create(title: String, cost: Int, date: Date) -> Observable<Void> {
-        let item = Item(title: title, cost: cost, date: date)
+    func create(_ title: String, _ cost: Int, _ date: Date, _ transaction: Transaction) -> Observable<Void> {
+        let item = Item(title: title, cost: cost, date: date, transaction: transaction)
         let realm = try! Realm()
         try! realm.write {
             realm.create(Item.self, value: item)
@@ -33,7 +38,7 @@ class ItemService: ItemServiceType {
         return Observable.just(Void())
     }
 
-    func update(id: String, title: String, cost: Int, date: Date) -> Observable<Void> {
+    func update(_ id: String, _ title: String, _ cost: Int, _ date: Date, _ transaction: Transaction) -> Observable<Void> {
         let realm = try! Realm()
         if let item = realm.objects(Item.self)
             .filter("id == %@", id)
@@ -42,6 +47,7 @@ class ItemService: ItemServiceType {
                 item.title = title
                 item.cost = cost
                 item.date = date
+                item.transaction = transaction
             }
         }
         return Observable.just(Void())
@@ -59,6 +65,16 @@ extension Results {
         }
         return array
     }
+
+    func filter(predicate: ItemPredicate?) -> Results {
+        guard let predicate = predicate else {
+            return self
+        }
+        switch predicate {
+        case .transaction(let transaction):
+            return self.filter("transactionValue == %d", transaction.rawValue)
+        }
+    }
 }
 
 class Item: Object {
@@ -66,17 +82,27 @@ class Item: Object {
     @objc dynamic var title: String = ""
     @objc dynamic var cost: Int = 0
     @objc dynamic var date: Date = Date()
+    @objc private dynamic var transactionValue: Int = 0
+    var transaction: Transaction {
+        get {
+            return Transaction(rawValue: transactionValue)!
+        }
+        set {
+            transactionValue = newValue.rawValue
+        }
+    }
 
     override class func indexedProperties() -> [String] {
         return ["id"]
     }
 
-    convenience required init(title: String, cost: Int, date: Date) {
+    convenience required init(title: String, cost: Int, date: Date, transaction: Transaction) {
         self.init()
 
         self.title = title
         self.cost = cost
         self.date = date
+        self.transaction = transaction
     }
 
 }
