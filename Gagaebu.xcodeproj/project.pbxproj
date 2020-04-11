@@ -7,24 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		176DC6D703FA85210004A2A8 /* libPods-Gagaebu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5432E083104C2D2E16A698 /* libPods-Gagaebu.a */; };
+		9C16D724243836AF00F226AD /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16D723243836AF00F226AD /* Date+.swift */; };
+		9C16D72924383CF600F226AD /* InputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16D72824383CF600F226AD /* InputTextField.swift */; };
+		9C8CB236243C0ABD00CC851A /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CB235243C0ABD00CC851A /* ItemService.swift */; };
+		9C8FBC632441997500764E3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8FBC622441997500764E3A /* SceneDelegate.swift */; };
+		9C8FBC662441B0AB00764E3A /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8FBC642441B0AB00764E3A /* ListItemCell.swift */; };
+		9C8FBC692441B4FF00764E3A /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8FBC682441B4FF00764E3A /* BaseTableViewCell.swift */; };
+		9C8FBC6C2441BACD00764E3A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8FBC6B2441BACD00764E3A /* BaseViewController.swift */; };
+		9C8FBC6E2441C20F00764E3A /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8FBC6D2441C20F00764E3A /* Int+.swift */; };
 		9CEDC73C2425CA37006DD872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEDC73B2425CA37006DD872 /* AppDelegate.swift */; };
-		9CEDC73E2425CA37006DD872 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEDC73D2425CA37006DD872 /* SceneDelegate.swift */; };
 		9CEDC7402425CA37006DD872 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEDC73F2425CA37006DD872 /* ListViewController.swift */; };
 		9CEDC7452425CA38006DD872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CEDC7442425CA38006DD872 /* Assets.xcassets */; };
 		9CEDC7482425CA38006DD872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CEDC7462425CA38006DD872 /* LaunchScreen.storyboard */; };
-		9CF9D04BCD9244E1800AEEE3 /* Pods_Gagaebu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12D83C3B3817D5E2F6B24F4 /* Pods_Gagaebu.framework */; };
+		9CEDC7602425D2D9006DD872 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEDC75D2425D2D9006DD872 /* ItemViewController.swift */; };
+		9CF0F42B2438696100279CF9 /* ResizableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0F42A2438696000279CF9 /* ResizableCollectionView.swift */; };
+		9CF0F42E2439D09B00279CF9 /* ListViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0F42D2439D09B00279CF9 /* ListViewReactor.swift */; };
+		9CF0F4302439D0DA00279CF9 /* ItemViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0F42F2439D0DA00279CF9 /* ItemViewReactor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E40F9E371818118EAA07B26 /* Pods-Gagaebu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gagaebu.release.xcconfig"; path = "Target Support Files/Pods-Gagaebu/Pods-Gagaebu.release.xcconfig"; sourceTree = "<group>"; };
+		9C16D723243836AF00F226AD /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		9C16D72824383CF600F226AD /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
+		9C8CB235243C0ABD00CC851A /* ItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
+		9C8FBC622441997500764E3A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9C8FBC642441B0AB00764E3A /* ListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
+		9C8FBC682441B4FF00764E3A /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		9C8FBC6B2441BACD00764E3A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		9C8FBC6D2441C20F00764E3A /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
 		9CEDC7382425CA37006DD872 /* Gagaebu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gagaebu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEDC73B2425CA37006DD872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9CEDC73D2425CA37006DD872 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9CEDC73F2425CA37006DD872 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		9CEDC7442425CA38006DD872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9CEDC7472425CA38006DD872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CEDC7492425CA38006DD872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C12D83C3B3817D5E2F6B24F4 /* Pods_Gagaebu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gagaebu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CEDC75D2425D2D9006DD872 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		9CF0F426243850BB00279CF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9CF0F42A2438696000279CF9 /* ResizableCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableCollectionView.swift; sourceTree = "<group>"; };
+		9CF0F42D2439D09B00279CF9 /* ListViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewReactor.swift; sourceTree = "<group>"; };
+		9CF0F42F2439D0DA00279CF9 /* ItemViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewReactor.swift; sourceTree = "<group>"; };
+		AD5432E083104C2D2E16A698 /* libPods-Gagaebu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gagaebu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31C7EC6C1EE039F3A78AC80 /* Pods-Gagaebu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gagaebu.debug.xcconfig"; path = "Target Support Files/Pods-Gagaebu/Pods-Gagaebu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CF9D04BCD9244E1800AEEE3 /* Pods_Gagaebu.framework in Frameworks */,
+				176DC6D703FA85210004A2A8 /* libPods-Gagaebu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +65,7 @@
 		4A4F2DF947A3654508951619 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C12D83C3B3817D5E2F6B24F4 /* Pods_Gagaebu.framework */,
+				AD5432E083104C2D2E16A698 /* libPods-Gagaebu.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -55,6 +77,44 @@
 				0E40F9E371818118EAA07B26 /* Pods-Gagaebu.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9C16D72624383CD300F226AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C16D723243836AF00F226AD /* Date+.swift */,
+				9C8FBC6D2441C20F00764E3A /* Int+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9C16D72724383CE200F226AD /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				9C16D72824383CF600F226AD /* InputTextField.swift */,
+				9CF0F42A2438696000279CF9 /* ResizableCollectionView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		9C8CB230243B535300CC851A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9C8CB235243C0ABD00CC851A /* ItemService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9C8FBC6A2441B5C600764E3A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C8FBC6B2441BACD00764E3A /* BaseViewController.swift */,
+				9CEDC73F2425CA37006DD872 /* ListViewController.swift */,
+				9CF0F42D2439D09B00279CF9 /* ListViewReactor.swift */,
+				9CEDC75D2425D2D9006DD872 /* ItemViewController.swift */,
+				9CF0F42F2439D0DA00279CF9 /* ItemViewReactor.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		9CEDC72F2425CA37006DD872 = {
@@ -78,14 +138,27 @@
 		9CEDC73A2425CA37006DD872 /* Gagaebu */ = {
 			isa = PBXGroup;
 			children = (
+				9C16D72724383CE200F226AD /* Custom */,
+				9C16D72624383CD300F226AD /* Extensions */,
+				9C8CB230243B535300CC851A /* Service */,
+				9C8FBC6A2441B5C600764E3A /* ViewControllers */,
+				9CF0F4312439D0FD00279CF9 /* View */,
 				9CEDC73B2425CA37006DD872 /* AppDelegate.swift */,
-				9CEDC73D2425CA37006DD872 /* SceneDelegate.swift */,
-				9CEDC73F2425CA37006DD872 /* ListViewController.swift */,
+				9C8FBC622441997500764E3A /* SceneDelegate.swift */,
 				9CEDC7442425CA38006DD872 /* Assets.xcassets */,
 				9CEDC7462425CA38006DD872 /* LaunchScreen.storyboard */,
 				9CEDC7492425CA38006DD872 /* Info.plist */,
 			);
 			path = Gagaebu;
+			sourceTree = "<group>";
+		};
+		9CF0F4312439D0FD00279CF9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C8FBC682441B4FF00764E3A /* BaseTableViewCell.swift */,
+				9C8FBC642441B0AB00764E3A /* ListItemCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,7 +172,6 @@
 				9CEDC7342425CA37006DD872 /* Sources */,
 				9CEDC7352425CA37006DD872 /* Frameworks */,
 				9CEDC7362425CA37006DD872 /* Resources */,
-				6CAEDCD41D8966C04E128F30 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,10 +199,11 @@
 			};
 			buildConfigurationList = 9CEDC7332425CA37006DD872 /* Build configuration list for PBXProject "Gagaebu" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ko,
 				Base,
 			);
 			mainGroup = 9CEDC72F2425CA37006DD872;
@@ -178,40 +251,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6CAEDCD41D8966C04E128F30 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Gagaebu/Pods-Gagaebu-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gagaebu/Pods-Gagaebu-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -219,9 +258,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8CB236243C0ABD00CC851A /* ItemService.swift in Sources */,
 				9CEDC7402425CA37006DD872 /* ListViewController.swift in Sources */,
+				9C8FBC6E2441C20F00764E3A /* Int+.swift in Sources */,
+				9CF0F4302439D0DA00279CF9 /* ItemViewReactor.swift in Sources */,
+				9CEDC7602425D2D9006DD872 /* ItemViewController.swift in Sources */,
 				9CEDC73C2425CA37006DD872 /* AppDelegate.swift in Sources */,
-				9CEDC73E2425CA37006DD872 /* SceneDelegate.swift in Sources */,
+				9C8FBC6C2441BACD00764E3A /* BaseViewController.swift in Sources */,
+				9CF0F42B2438696100279CF9 /* ResizableCollectionView.swift in Sources */,
+				9CF0F42E2439D09B00279CF9 /* ListViewReactor.swift in Sources */,
+				9C8FBC662441B0AB00764E3A /* ListItemCell.swift in Sources */,
+				9C16D72924383CF600F226AD /* InputTextField.swift in Sources */,
+				9C16D724243836AF00F226AD /* Date+.swift in Sources */,
+				9C8FBC692441B4FF00764E3A /* BaseTableViewCell.swift in Sources */,
+				9C8FBC632441997500764E3A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +281,7 @@
 		9CEDC7462425CA38006DD872 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9CEDC7472425CA38006DD872 /* Base */,
+				9CF0F426243850BB00279CF9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -243,6 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -289,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -303,6 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -343,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -365,7 +417,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.soso.Gagaebu;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soso.Practice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -384,7 +437,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.soso.Gagaebu;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soso.Practice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

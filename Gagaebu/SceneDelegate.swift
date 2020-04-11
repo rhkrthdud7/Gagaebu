@@ -18,13 +18,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let scene = (scene as? UIWindowScene) else { return }
+
         let window = UIWindow(windowScene: scene)
-        let nav = UINavigationController(rootViewController: ListViewController())
+        let itemService = ItemService()
+        let listViewReactor = ListViewReactor(itemService: itemService)
+        let listVC = ListViewController(reactor: listViewReactor)
+        let nav = UINavigationController(rootViewController: listVC)
+        nav.navigationBar.prefersLargeTitles = true
         let tab = UITabBarController()
         tab.setViewControllers([nav], animated: false)
-//        tab.toolbarItems![0].image
+        tab.tabBar.items?[0].image = #imageLiteral(resourceName: "icon_list_tab")
         window.rootViewController = tab
         window.makeKeyAndVisible()
+
         self.window = window
     }
 
