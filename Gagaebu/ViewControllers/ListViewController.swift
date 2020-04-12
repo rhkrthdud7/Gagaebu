@@ -41,12 +41,15 @@ class ListViewController: BaseViewController, View {
     let addButton = UIBarButtonItem(title: "추가", style: .plain, target: self, action: nil)
     let header = UIView().then {
         let width = UIScreen.main.bounds.width
-        $0.frame = CGRect(x: 0, y: 0, width: width, height: 64)
+        $0.frame = CGRect(x: 0, y: 0, width: width, height: 90)
     }
     let segmentedControl = UISegmentedControl().then {
         $0.insertSegment(withTitle: Transaction.income.title, at: 0, animated: false)
         $0.insertSegment(withTitle: Transaction.outcome.title, at: 0, animated: false)
         $0.selectedSegmentIndex = 0
+    }
+    let labelTotal = UILabel().then {
+        $0.textAlignment = .right
     }
 
     init(reactor: ListViewReactor) {
@@ -71,16 +74,20 @@ class ListViewController: BaseViewController, View {
 
         tableView.tableHeaderView = header
         header.addSubview(segmentedControl)
+        header.addSubview(labelTotal)
     }
 
     override func setupConstraints() {
         tableView.snp.makeConstraints({
             $0.edges.equalToSuperview()
         })
-
         segmentedControl.snp.makeConstraints {
             $0.top.leading.equalToSuperview().inset(16)
             $0.trailing.equalToSuperview().inset(16).priority(999)
+        }
+        labelTotal.snp.makeConstraints {
+            $0.top.equalTo(segmentedControl.snp.bottom).offset(10)
+            $0.leading.trailing.equalTo(segmentedControl)
         }
     }
 
@@ -131,6 +138,11 @@ class ListViewController: BaseViewController, View {
         reactor.state
             .map { $0.transaction.rawValue }
             .bind(to: segmentedControl.rx.selectedSegmentIndex)
+            .disposed(by: disposeBag)
+
+        reactor.state
+            .map { "총: \($0.totalAmount.currencyFormattedText)" }
+            .bind(to: labelTotal.rx.text)
             .disposed(by: disposeBag)
     }
 

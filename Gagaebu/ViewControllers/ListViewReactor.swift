@@ -32,6 +32,7 @@ final class ListViewReactor: Reactor {
     struct State {
         var items: [Item] = []
         var transaction: Transaction = .outcome
+        var totalAmount: Int = 0
     }
 
     func mutate(action: Action) -> Observable<Mutation> {
@@ -49,6 +50,7 @@ final class ListViewReactor: Reactor {
         switch mutation {
         case .setItems(let items):
             newState.items = items
+            newState.totalAmount = items.map({ $0.cost }).reduce(0, +)
         case .setTransaction(let transaction):
             newState.transaction = transaction
         }
