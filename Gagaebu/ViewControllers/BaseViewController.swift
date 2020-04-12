@@ -39,3 +39,12 @@ class BaseViewController: UIViewController {
     }
 
 }
+
+extension BaseViewController {
+    func navigationController() -> UINavigationController {
+        let navC = UINavigationController(rootViewController: self)
+        navC.navigationBar.prefersLargeTitles = true
+        return navC
+    }
+    
+}

@@ -22,13 +22,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let itemService = ItemService()
         let listViewReactor = ListViewReactor(itemService: itemService)
         let listVC = ListViewController(reactor: listViewReactor)
-        let nav = UINavigationController(rootViewController: listVC)
-        nav.navigationBar.prefersLargeTitles = true
-        let tab = UITabBarController()
-        tab.setViewControllers([nav], animated: false)
-        tab.tabBar.items?[0].image = #imageLiteral(resourceName: "icon_list_tab")
-        tab.tabBar.isTranslucent = false
-        window.rootViewController = tab
+        let settingReactor = SettingViewReactor(itemService: itemService)
+        let setingVC = SettingViewController(reactor: settingReactor)
+        let tabC = UITabBarController()
+        tabC.setViewControllers([
+            listVC.navigationController(),
+            setingVC.navigationController()
+        ], animated: false)
+        tabC.tabBar.isTranslucent = false
+        tabC.tabBar.items?[0].image = #imageLiteral(resourceName: "icon_list_tab")
+        tabC.tabBar.items?[1].image = #imageLiteral(resourceName: "icon_settings_tab")
+        
+        window.rootViewController = tabC
         window.makeKeyAndVisible()
 
         let config = Realm.Configuration(
@@ -41,7 +46,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         Realm.Configuration.defaultConfiguration = config
 
         let navigator = Navigator()
-        NavigationMap.initialize(navigator: navigator, itemService: itemService)
+        NavigationMap.initialize(navigator: navigator, rootVC: tabC, itemService: itemService)
 
         self.window = window
         self.navigator = navigator

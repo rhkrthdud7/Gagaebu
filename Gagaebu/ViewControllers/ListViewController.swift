@@ -65,7 +65,7 @@ class ListViewController: BaseViewController, View {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "List"
+        navigationItem.title = "List"
         view.backgroundColor = .systemBackground
         view.addSubview(tableView)
 
