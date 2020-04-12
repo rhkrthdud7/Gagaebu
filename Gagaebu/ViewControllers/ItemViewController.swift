@@ -33,9 +33,16 @@ class ItemViewController: BaseViewController, ReactorKit.View {
         $0.keyboardType = .numberPad
     }
     let textFieldTitle = BorderedTextField()
-    let buttonAdd = UIButton(type: .system).then {
+    let buttonSubmit = UIButton(type: .system).then {
         $0.layer.cornerRadius = 15
         $0.backgroundColor = $0.tintColor
+        $0.setTitleColor(.white, for: .normal)
+    }
+    let buttonDelete = UIButton(type: .system).then {
+        $0.tintColor = .red
+        $0.layer.cornerRadius = 15
+        $0.backgroundColor = $0.tintColor
+        $0.setTitle("삭제", for: .normal)
         $0.setTitleColor(.white, for: .normal)
     }
 
@@ -55,7 +62,7 @@ class ItemViewController: BaseViewController, ReactorKit.View {
 
         view.backgroundColor = .systemBackground
     }
-    
+
     override func setupConstraints() {
         let scrollView = UIScrollView().then {
             $0.alwaysBounceVertical = true
@@ -124,8 +131,16 @@ class ItemViewController: BaseViewController, ReactorKit.View {
             $0.height.equalTo(50)
         }
 
-        viewContent.addSubview(buttonAdd)
-        buttonAdd.snp.makeConstraints {
+        let stackViewButton = UIStackView().then {
+            $0.axis = .horizontal
+            $0.alignment = .fill
+            $0.distribution = .fillEqually
+            $0.spacing = 8
+            $0.addArrangedSubview(buttonSubmit)
+            $0.addArrangedSubview(buttonDelete)
+        }
+        viewContent.addSubview(stackViewButton)
+        stackViewButton.snp.makeConstraints {
             $0.top.equalTo(textFieldTitle.snp.bottom).offset(16)
             $0.leading.trailing.bottom.equalToSuperview().inset(16)
             $0.height.equalTo(50)
@@ -158,8 +173,13 @@ class ItemViewController: BaseViewController, ReactorKit.View {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
 
-        buttonAdd.rx.tap
+        buttonSubmit.rx.tap
             .map { Reactor.Action.pressSubmit }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
+        buttonDelete.rx.tap
+            .map { Reactor.Action.pressDelete }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
 
@@ -192,17 +212,17 @@ class ItemViewController: BaseViewController, ReactorKit.View {
             .subscribe(onNext: { [weak self] isEnabled in
                 guard let self = self else { return }
                 if isEnabled {
-                    self.buttonAdd.backgroundColor = self.buttonAdd.tintColor
+                    self.buttonSubmit.backgroundColor = self.buttonSubmit.tintColor
                 } else {
-                    self.buttonAdd.backgroundColor = .lightGray
+                    self.buttonSubmit.backgroundColor = .lightGray
                 }
-                self.buttonAdd.isEnabled = isEnabled
+                self.buttonSubmit.isEnabled = isEnabled
             })
             .disposed(by: disposeBag)
 
         reactor.state.asObservable()
             .map { $0.buttonTitle }
-            .bind(to: buttonAdd.rx.title())
+            .bind(to: buttonSubmit.rx.title())
             .disposed(by: disposeBag)
 
         reactor.state.asObservable()
@@ -214,6 +234,12 @@ class ItemViewController: BaseViewController, ReactorKit.View {
             .map { $0.transaction.rawValue }
             .take(1)
             .bind(to: segmentedControl.rx.selectedSegmentIndex)
+            .dispose()
+
+        reactor.state.asObservable()
+            .map { $0.isDeleteButtonHidden }
+            .take(1)
+            .bind(to: buttonDelete.rx.isHidden)
             .dispose()
 
         reactor.state.asObservable()

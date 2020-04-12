@@ -28,22 +28,23 @@ final class ItemViewReactor: Reactor {
         case .new(let transaction):
             self.initialState = State(title: "New", buttonTitle: "추가", transaction: transaction)
         case .edit(let item):
-            self.initialState = State(title: "Edit", buttonTitle: "수정", itemTitle: item.title, itemCost: item.cost, itemDate: item.date, transaction: item.transaction, isSubmitButtonEnabled: true)
+            self.initialState = State(title: "Edit", buttonTitle: "수정", itemTitle: item.title, itemCost: item.cost, itemDate: item.date, transaction: item.transaction, isSubmitButtonEnabled: true, isDeleteButtonHidden: false)
         }
     }
 
     enum Action {
-        case updateDate(Date)
-        case updateCost(String)
         case updateTitle(String)
+        case updateCost(String)
+        case updateDate(Date)
         case updateTransaction(Transaction)
         case pressSubmit
+        case pressDelete
     }
 
     enum Mutation {
-        case setDate(Date)
-        case setCost(String)
         case setTitle(String)
+        case setCost(String)
+        case setDate(Date)
         case setTransaction(Transaction)
         case pop
     }
@@ -56,6 +57,7 @@ final class ItemViewReactor: Reactor {
         var itemDate: Date
         var transaction: Transaction
         var isSubmitButtonEnabled: Bool
+        var isDeleteButtonHidden: Bool
         var shouldPop: Bool
 
         init(
@@ -65,7 +67,8 @@ final class ItemViewReactor: Reactor {
             itemCost: Int = 0,
             itemDate: Date = Date(),
             transaction: Transaction,
-            isSubmitButtonEnabled: Bool = false
+            isSubmitButtonEnabled: Bool = false,
+            isDeleteButtonHidden: Bool = true
         ) {
             self.title = title
             self.buttonTitle = buttonTitle
@@ -73,6 +76,7 @@ final class ItemViewReactor: Reactor {
             self.itemCost = itemCost
             self.itemDate = itemDate
             self.isSubmitButtonEnabled = isSubmitButtonEnabled
+            self.isDeleteButtonHidden = isDeleteButtonHidden
             self.shouldPop = false
             self.transaction = transaction
         }
@@ -81,13 +85,13 @@ final class ItemViewReactor: Reactor {
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .updateTitle(let title):
-            return Observable.just(Mutation.setTitle(title))
+            return .just(Mutation.setTitle(title))
         case .updateCost(let cost):
-            return Observable.just(Mutation.setCost(cost))
+            return .just(Mutation.setCost(cost))
         case .updateDate(let date):
-            return Observable.just(Mutation.setDate(date))
+            return .just(Mutation.setDate(date))
         case .updateTransaction(let transaction):
-            return Observable.just(Mutation.setTransaction(transaction))
+            return .just(Mutation.setTransaction(transaction))
         case .pressSubmit:
             switch mode {
             case .new:
@@ -98,6 +102,14 @@ final class ItemViewReactor: Reactor {
                 return itemService
                     .update(item.id, currentState.itemTitle, currentState.itemCost, currentState.itemDate, currentState.transaction)
                     .map { Mutation.pop }
+            }
+        case .pressDelete:
+            if case let .edit(item) = self.mode {
+                return itemService
+                    .delete(item.id)
+                    .map { Mutation.pop }
+            } else {
+                return .empty()
             }
         }
     }

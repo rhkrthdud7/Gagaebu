@@ -18,6 +18,7 @@ protocol ItemServiceType {
     func fetchItems(_ predicate: ItemPredicate) -> Observable<[Item]>
     func create(_ title: String, _ cost: Int, _ date: Date, _ transaction: Transaction) -> Observable<Void>
     func update(_ id: String, _ title: String, _ cost: Int, _ date: Date, _ transaction: Transaction) -> Observable<Void>
+    func delete(_ id: String) -> Observable<Void>
 }
 
 class ItemService: ItemServiceType {
@@ -48,6 +49,18 @@ class ItemService: ItemServiceType {
                 item.cost = cost
                 item.date = date
                 item.transaction = transaction
+            }
+        }
+        return Observable.just(Void())
+    }
+
+    func delete(_ id: String) -> Observable<Void> {
+        let realm = try! Realm()
+        if let item = realm.objects(Item.self)
+            .filter("id == %@", id)
+            .first {
+            try! realm.write {
+                realm.delete(item)
             }
         }
         return Observable.just(Void())
