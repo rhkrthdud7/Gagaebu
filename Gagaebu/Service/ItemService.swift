@@ -19,6 +19,7 @@ protocol ItemServiceType {
     func create(_ title: String, _ cost: Int, _ date: Date, _ transaction: Transaction) -> Observable<Void>
     func update(_ id: String, _ title: String, _ cost: Int, _ date: Date, _ transaction: Transaction) -> Observable<Void>
     func delete(_ id: String) -> Observable<Void>
+    func get(_ id: String) -> Item?
 }
 
 class ItemService: ItemServiceType {
@@ -64,6 +65,12 @@ class ItemService: ItemServiceType {
             }
         }
         return Observable.just(Void())
+    }
+
+    func get(_ id: String) -> Item? {
+        let realm = try! Realm()
+        let item = realm.objects(Item.self).filter("id == %@", id).first
+        return item
     }
 
 }

@@ -21,4 +21,6 @@ target 'Gagaebu' do
   pod 'ReusableKit/RxSwift'
   pod 'SnapKit'
   pod 'Then'
+  
+  pod 'URLNavigator'
 end
