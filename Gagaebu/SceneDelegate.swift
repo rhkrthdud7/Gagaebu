@@ -37,7 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
 
         let config = Realm.Configuration(
-            schemaVersion: 1,
+            schemaVersion: 0,
             migrationBlock: { migration, oldSchemaVersion in
                 if (oldSchemaVersion < 1) {
 

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		176DC6D703FA85210004A2A8 /* libPods-Gagaebu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5432E083104C2D2E16A698 /* libPods-Gagaebu.a */; };
+		3A83D2528160FC72031AEC85 /* Pods_Gagaebu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 394AE7864E5E9654ACEDF961 /* Pods_Gagaebu.framework */; };
+		4AFFA668B349EEC619C11028 /* Pods_GagaebuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB94D5CDA3F24685671CBC42 /* Pods_GagaebuTests.framework */; };
 		9C16D724243836AF00F226AD /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16D723243836AF00F226AD /* Date+.swift */; };
 		9C16D72924383CF600F226AD /* BorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16D72824383CF600F226AD /* BorderedTextField.swift */; };
+		9C2949AD244703F500604358 /* GagaebuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2949AC244703F500604358 /* GagaebuTests.swift */; };
 		9C8CB236243C0ABD00CC851A /* ItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CB235243C0ABD00CC851A /* ItemService.swift */; };
 		9C8FBC632441997500764E3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8FBC622441997500764E3A /* SceneDelegate.swift */; };
 		9C8FBC662441B0AB00764E3A /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8FBC642441B0AB00764E3A /* ListItemCell.swift */; };
@@ -32,10 +34,26 @@
 		9CF0F4302439D0DA00279CF9 /* ItemViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0F42F2439D0DA00279CF9 /* ItemViewReactor.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9C2949AF244703F500604358 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CEDC7302425CA37006DD872 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CEDC7372425CA37006DD872;
+			remoteInfo = Gagaebu;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0E40F9E371818118EAA07B26 /* Pods-Gagaebu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gagaebu.release.xcconfig"; path = "Target Support Files/Pods-Gagaebu/Pods-Gagaebu.release.xcconfig"; sourceTree = "<group>"; };
+		394AE7864E5E9654ACEDF961 /* Pods_Gagaebu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gagaebu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		867433BABBEC6F6B79CDB888 /* Pods-GagaebuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GagaebuTests.debug.xcconfig"; path = "Target Support Files/Pods-GagaebuTests/Pods-GagaebuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C16D723243836AF00F226AD /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		9C16D72824383CF600F226AD /* BorderedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedTextField.swift; sourceTree = "<group>"; };
+		9C2949AA244703F500604358 /* GagaebuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GagaebuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C2949AC244703F500604358 /* GagaebuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GagaebuTests.swift; sourceTree = "<group>"; };
+		9C2949AE244703F500604358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C2949B424470AE900604358 /* libPods-Gagaebu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libPods-Gagaebu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8CB235243C0ABD00CC851A /* ItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemService.swift; sourceTree = "<group>"; };
 		9C8FBC622441997500764E3A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9C8FBC642441B0AB00764E3A /* ListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
@@ -58,16 +76,25 @@
 		9CF0F42A2438696000279CF9 /* ResizableCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableCollectionView.swift; sourceTree = "<group>"; };
 		9CF0F42D2439D09B00279CF9 /* ListViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewReactor.swift; sourceTree = "<group>"; };
 		9CF0F42F2439D0DA00279CF9 /* ItemViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewReactor.swift; sourceTree = "<group>"; };
-		AD5432E083104C2D2E16A698 /* libPods-Gagaebu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gagaebu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7DDCD27AFBC12E6CE355011 /* Pods-GagaebuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GagaebuTests.release.xcconfig"; path = "Target Support Files/Pods-GagaebuTests/Pods-GagaebuTests.release.xcconfig"; sourceTree = "<group>"; };
+		DB94D5CDA3F24685671CBC42 /* Pods_GagaebuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GagaebuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31C7EC6C1EE039F3A78AC80 /* Pods-Gagaebu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gagaebu.debug.xcconfig"; path = "Target Support Files/Pods-Gagaebu/Pods-Gagaebu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9C2949A7244703F500604358 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AFFA668B349EEC619C11028 /* Pods_GagaebuTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CEDC7352425CA37006DD872 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				176DC6D703FA85210004A2A8 /* libPods-Gagaebu.a in Frameworks */,
+				3A83D2528160FC72031AEC85 /* Pods_Gagaebu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +104,8 @@
 		4A4F2DF947A3654508951619 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AD5432E083104C2D2E16A698 /* libPods-Gagaebu.a */,
+				DB94D5CDA3F24685671CBC42 /* Pods_GagaebuTests.framework */,
+				394AE7864E5E9654ACEDF961 /* Pods_Gagaebu.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -87,6 +115,8 @@
 			children = (
 				E31C7EC6C1EE039F3A78AC80 /* Pods-Gagaebu.debug.xcconfig */,
 				0E40F9E371818118EAA07B26 /* Pods-Gagaebu.release.xcconfig */,
+				867433BABBEC6F6B79CDB888 /* Pods-GagaebuTests.debug.xcconfig */,
+				B7DDCD27AFBC12E6CE355011 /* Pods-GagaebuTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -109,6 +139,23 @@
 				9CF0F42A2438696000279CF9 /* ResizableCollectionView.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		9C2949AB244703F500604358 /* GagaebuTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C2949AC244703F500604358 /* GagaebuTests.swift */,
+				9C2949AE244703F500604358 /* Info.plist */,
+			);
+			path = GagaebuTests;
+			sourceTree = "<group>";
+		};
+		9C2949B624470B1F00604358 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				9C2949B424470AE900604358 /* libPods-Gagaebu.a */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		9C8CB230243B535300CC851A /* Service */ = {
@@ -138,9 +185,11 @@
 			isa = PBXGroup;
 			children = (
 				9CEDC73A2425CA37006DD872 /* Gagaebu */,
+				9C2949AB244703F500604358 /* GagaebuTests */,
 				9CEDC7392425CA37006DD872 /* Products */,
 				6BFA7340AF2B4CA43BA5C972 /* Pods */,
 				4A4F2DF947A3654508951619 /* Frameworks */,
+				9C2949B624470B1F00604358 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				9CEDC7382425CA37006DD872 /* Gagaebu.app */,
+				9C2949AA244703F500604358 /* GagaebuTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,6 +232,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9C2949A9244703F500604358 /* GagaebuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C2949B3244703F500604358 /* Build configuration list for PBXNativeTarget "GagaebuTests" */;
+			buildPhases = (
+				9C0DD2462BD1E721ABD7F3DC /* [CP] Check Pods Manifest.lock */,
+				9C2949A6244703F500604358 /* Sources */,
+				9C2949A7244703F500604358 /* Frameworks */,
+				9C2949A8244703F500604358 /* Resources */,
+				1652AF572E877B97E346E31F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C2949B0244703F500604358 /* PBXTargetDependency */,
+			);
+			name = GagaebuTests;
+			productName = GagaebuTests;
+			productReference = 9C2949AA244703F500604358 /* GagaebuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9CEDC7372425CA37006DD872 /* Gagaebu */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9CEDC74C2425CA38006DD872 /* Build configuration list for PBXNativeTarget "Gagaebu" */;
@@ -190,6 +260,7 @@
 				9CEDC7342425CA37006DD872 /* Sources */,
 				9CEDC7352425CA37006DD872 /* Frameworks */,
 				9CEDC7362425CA37006DD872 /* Resources */,
+				56591B17570D1FDEC8778B94 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,6 +281,10 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = Soso;
 				TargetAttributes = {
+					9C2949A9244703F500604358 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 9CEDC7372425CA37006DD872;
+					};
 					9CEDC7372425CA37006DD872 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -230,11 +305,19 @@
 			projectRoot = "";
 			targets = (
 				9CEDC7372425CA37006DD872 /* Gagaebu */,
+				9C2949A9244703F500604358 /* GagaebuTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9C2949A8244703F500604358 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CEDC7362425CA37006DD872 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,9 +353,109 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1652AF572E877B97E346E31F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GagaebuTests/Pods-GagaebuTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GagaebuTests/Pods-GagaebuTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56591B17570D1FDEC8778B94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gagaebu/Pods-Gagaebu-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReusableKit/ReusableKit.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
+				"${BUILT_PRODUCTS_DIR}/URLNavigator/URLNavigator.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReusableKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/URLNavigator.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gagaebu/Pods-Gagaebu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C0DD2462BD1E721ABD7F3DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GagaebuTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9C2949A6244703F500604358 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C2949AD244703F500604358 /* GagaebuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CEDC7342425CA37006DD872 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +484,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9C2949B0244703F500604358 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CEDC7372425CA37006DD872 /* Gagaebu */;
+			targetProxy = 9C2949AF244703F500604358 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		9CEDC7462425CA38006DD872 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -313,6 +504,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9C2949B1244703F500604358 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 867433BABBEC6F6B79CDB888 /* Pods-GagaebuTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P37C4Y6Q82;
+				INFOPLIST_FILE = GagaebuTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soso.GagaebuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gagaebu.app/Gagaebu";
+			};
+			name = Debug;
+		};
+		9C2949B2244703F500604358 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7DDCD27AFBC12E6CE355011 /* Pods-GagaebuTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P37C4Y6Q82;
+				INFOPLIST_FILE = GagaebuTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soso.GagaebuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gagaebu.app/Gagaebu";
+			};
+			name = Release;
+		};
 		9CEDC74A2425CA38006DD872 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -472,6 +707,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9C2949B3244703F500604358 /* Build configuration list for PBXNativeTarget "GagaebuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C2949B1244703F500604358 /* Debug */,
+				9C2949B2244703F500604358 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9CEDC7332425CA37006DD872 /* Build configuration list for PBXProject "Gagaebu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
