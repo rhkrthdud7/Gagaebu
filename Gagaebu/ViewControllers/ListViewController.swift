@@ -51,6 +51,10 @@ class ListViewController: BaseViewController, View {
     let labelTotal = UILabel().then {
         $0.textAlignment = .right
     }
+    let labelEmpty = UILabel().then {
+        $0.text = "새로운 아이템을 등록해주세요 :)"
+        $0.textAlignment = .center
+    }
 
     init(reactor: ListViewReactor) {
         super.init()
@@ -73,6 +77,7 @@ class ListViewController: BaseViewController, View {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
 
         tableView.tableHeaderView = header
+        tableView.backgroundView = labelEmpty
         header.addSubview(segmentedControl)
         header.addSubview(labelTotal)
     }
@@ -143,6 +148,11 @@ class ListViewController: BaseViewController, View {
         reactor.state
             .map { "총: \($0.totalAmount.currencyFormattedText)" }
             .bind(to: labelTotal.rx.text)
+            .disposed(by: disposeBag)
+
+        reactor.state
+            .map { $0.isEmptyLabelHidden }
+            .bind(to: labelEmpty.rx.isHidden)
             .disposed(by: disposeBag)
     }
 

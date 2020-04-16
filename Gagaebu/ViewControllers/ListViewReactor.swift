@@ -33,6 +33,7 @@ final class ListViewReactor: Reactor {
         var items: [Item] = []
         var transaction: Transaction = .outcome
         var totalAmount: Int = 0
+        var isEmptyLabelHidden: Bool = true
     }
 
     func mutate(action: Action) -> Observable<Mutation> {
@@ -51,6 +52,7 @@ final class ListViewReactor: Reactor {
         case .setItems(let items):
             newState.items = items
             newState.totalAmount = items.map({ $0.cost }).reduce(0, +)
+            newState.isEmptyLabelHidden = !items.isEmpty
         case .setTransaction(let transaction):
             newState.transaction = transaction
         }
