@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A83D2528160FC72031AEC85 /* Pods_Gagaebu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 394AE7864E5E9654ACEDF961 /* Pods_Gagaebu.framework */; };
-		4AFFA668B349EEC619C11028 /* Pods_GagaebuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB94D5CDA3F24685671CBC42 /* Pods_GagaebuTests.framework */; };
+		4D2D9F0712E560589F42FD90 /* Pods_Gagaebu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E9062FA1A29F1B7B9FA537 /* Pods_Gagaebu.framework */; };
 		9C16D724243836AF00F226AD /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16D723243836AF00F226AD /* Date+.swift */; };
 		9C16D72924383CF600F226AD /* BorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16D72824383CF600F226AD /* BorderedTextField.swift */; };
 		9C2949AD244703F500604358 /* GagaebuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2949AC244703F500604358 /* GagaebuTests.swift */; };
@@ -32,6 +31,7 @@
 		9CF0F42B2438696100279CF9 /* ResizableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0F42A2438696000279CF9 /* ResizableCollectionView.swift */; };
 		9CF0F42E2439D09B00279CF9 /* ListViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0F42D2439D09B00279CF9 /* ListViewReactor.swift */; };
 		9CF0F4302439D0DA00279CF9 /* ItemViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0F42F2439D0DA00279CF9 /* ItemViewReactor.swift */; };
+		BC174A12B491D95F864F5903 /* Pods_GagaebuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB947BA53C481A7F09632AA6 /* Pods_GagaebuTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 
 /* Begin PBXFileReference section */
 		0E40F9E371818118EAA07B26 /* Pods-Gagaebu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gagaebu.release.xcconfig"; path = "Target Support Files/Pods-Gagaebu/Pods-Gagaebu.release.xcconfig"; sourceTree = "<group>"; };
-		394AE7864E5E9654ACEDF961 /* Pods_Gagaebu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gagaebu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60E9062FA1A29F1B7B9FA537 /* Pods_Gagaebu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gagaebu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		867433BABBEC6F6B79CDB888 /* Pods-GagaebuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GagaebuTests.debug.xcconfig"; path = "Target Support Files/Pods-GagaebuTests/Pods-GagaebuTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C16D723243836AF00F226AD /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		9C16D72824383CF600F226AD /* BorderedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedTextField.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		9CF0F42D2439D09B00279CF9 /* ListViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewReactor.swift; sourceTree = "<group>"; };
 		9CF0F42F2439D0DA00279CF9 /* ItemViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewReactor.swift; sourceTree = "<group>"; };
 		B7DDCD27AFBC12E6CE355011 /* Pods-GagaebuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GagaebuTests.release.xcconfig"; path = "Target Support Files/Pods-GagaebuTests/Pods-GagaebuTests.release.xcconfig"; sourceTree = "<group>"; };
-		DB94D5CDA3F24685671CBC42 /* Pods_GagaebuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GagaebuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB947BA53C481A7F09632AA6 /* Pods_GagaebuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GagaebuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31C7EC6C1EE039F3A78AC80 /* Pods-Gagaebu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gagaebu.debug.xcconfig"; path = "Target Support Files/Pods-Gagaebu/Pods-Gagaebu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AFFA668B349EEC619C11028 /* Pods_GagaebuTests.framework in Frameworks */,
+				BC174A12B491D95F864F5903 /* Pods_GagaebuTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A83D2528160FC72031AEC85 /* Pods_Gagaebu.framework in Frameworks */,
+				4D2D9F0712E560589F42FD90 /* Pods_Gagaebu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,8 +104,8 @@
 		4A4F2DF947A3654508951619 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DB94D5CDA3F24685671CBC42 /* Pods_GagaebuTests.framework */,
-				394AE7864E5E9654ACEDF961 /* Pods_Gagaebu.framework */,
+				60E9062FA1A29F1B7B9FA537 /* Pods_Gagaebu.framework */,
+				DB947BA53C481A7F09632AA6 /* Pods_GagaebuTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -240,7 +240,7 @@
 				9C2949A6244703F500604358 /* Sources */,
 				9C2949A7244703F500604358 /* Frameworks */,
 				9C2949A8244703F500604358 /* Resources */,
-				1652AF572E877B97E346E31F /* [CP] Embed Pods Frameworks */,
+				1553453E45DAE18793515526 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,7 +260,7 @@
 				9CEDC7342425CA37006DD872 /* Sources */,
 				9CEDC7352425CA37006DD872 /* Frameworks */,
 				9CEDC7362425CA37006DD872 /* Resources */,
-				56591B17570D1FDEC8778B94 /* [CP] Embed Pods Frameworks */,
+				3BAD348FEFAD2A0D466AD019 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,7 +353,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1652AF572E877B97E346E31F /* [CP] Embed Pods Frameworks */ = {
+		1553453E45DAE18793515526 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -377,7 +377,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GagaebuTests/Pods-GagaebuTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		56591B17570D1FDEC8778B94 /* [CP] Embed Pods Frameworks */ = {
+		3BAD348FEFAD2A0D466AD019 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

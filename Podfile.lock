@@ -33,18 +33,18 @@ PODS:
   - URLNavigator (2.3.0)
 
 DEPENDENCIES:
-  - ReactorKit
-  - RealmSwift
-  - ReusableKit
+  - ReactorKit (~> 2.0.1)
+  - RealmSwift (~> 4.3.2)
+  - ReusableKit (~> 3.0.0)
   - ReusableKit/RxSwift
-  - RxCocoa
-  - RxGesture
-  - RxOptional
-  - RxSwift
-  - RxViewController
-  - SnapKit
-  - Then
-  - URLNavigator
+  - RxCocoa (~> 5.0.1)
+  - RxGesture (~> 3.0.1)
+  - RxOptional (~> 4.1.0)
+  - RxSwift (~> 5.0.1)
+  - RxViewController (~> 1.0.0)
+  - SnapKit (~> 5.0.1)
+  - Then (~> 2.6.0)
+  - URLNavigator (~> 2.3.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -77,6 +77,6 @@ SPEC CHECKSUMS:
   Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
 
-PODFILE CHECKSUM: 6c4d907181d4f11afd60cebd58979777c13ed5e2
+PODFILE CHECKSUM: f44bc69dadc65c09848fe4242e434310789f15c3
 
 COCOAPODS: 1.6.1
