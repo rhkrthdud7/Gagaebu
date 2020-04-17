@@ -32,4 +32,5 @@ class SettingViewController: BaseViewController, View {
     func bind(reactor: SettingViewReactor) {
         
     }
+    
 }

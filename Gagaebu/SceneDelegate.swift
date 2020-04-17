@@ -28,18 +28,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabC.setViewControllers([
             listVC.navigationController(),
             setingVC.navigationController()
-        ], animated: false)
+            ], animated: false)
         tabC.tabBar.isTranslucent = false
         tabC.tabBar.items?[0].image = #imageLiteral(resourceName: "icon_list_tab")
         tabC.tabBar.items?[1].image = #imageLiteral(resourceName: "icon_settings_tab")
-        
+
         window.rootViewController = tabC
         window.makeKeyAndVisible()
 
         let config = Realm.Configuration(
             schemaVersion: 0,
             migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 1) {
+                if oldSchemaVersion < 1 {
 
                 }
             })
@@ -50,7 +50,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         self.window = window
         self.navigator = navigator
-        
+
         if let url = connectionOptions.urlContexts.first?.url {
             if navigator.push(url) != nil {
                 return
@@ -65,5 +65,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
     }
-}
 
+}
