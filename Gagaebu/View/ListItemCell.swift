@@ -50,4 +50,5 @@ class ListItemCell: BaseTableViewCell {
             $0.trailing.equalToSuperview().inset(16)
         }
     }
+    
 }

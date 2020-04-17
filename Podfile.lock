@@ -1,4 +1,5 @@
 PODS:
+  - AcknowList (1.9.3)
   - ReactorKit (2.0.1):
     - RxSwift (~> 5.0)
   - Realm (4.3.2):
@@ -33,6 +34,7 @@ PODS:
   - URLNavigator (2.3.0)
 
 DEPENDENCIES:
+  - AcknowList (~> 1.9.3)
   - ReactorKit (~> 2.0.1)
   - RealmSwift (~> 4.3.2)
   - ReusableKit (~> 3.0.0)
@@ -48,6 +50,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AcknowList
     - ReactorKit
     - Realm
     - RealmSwift
@@ -63,6 +66,7 @@ SPEC REPOS:
     - URLNavigator
 
 SPEC CHECKSUMS:
+  AcknowList: a3ee7cfba2c45cf9d07d1b18fe729a5bcc518366
   ReactorKit: a63c5e11e0fd32d59d672e54178b0ed2876b764b
   Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
   RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
@@ -77,6 +81,6 @@ SPEC CHECKSUMS:
   Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
 
-PODFILE CHECKSUM: f44bc69dadc65c09848fe4242e434310789f15c3
+PODFILE CHECKSUM: 73eb47ef927b168a9a683af1a91f47eb91c3b38c
 
 COCOAPODS: 1.6.1

@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let itemService = ItemService()
         let listViewReactor = ListViewReactor(itemService: itemService)
         let listVC = ListViewController(reactor: listViewReactor)
-        let settingReactor = SettingViewReactor(itemService: itemService)
+        let settingReactor = SettingViewReactor()
         let setingVC = SettingViewController(reactor: settingReactor)
         let tabC = UITabBarController()
         tabC.setViewControllers([

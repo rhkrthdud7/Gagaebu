@@ -21,6 +21,8 @@ target 'Gagaebu' do
   pod 'Then', '~> 2.6.0'
   
   pod 'URLNavigator', '~> 2.3.0'
+
+  pod 'AcknowList', '~> 1.9.3'
 end
 
 target 'GagaebuTests' do

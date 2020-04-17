@@ -12,11 +12,13 @@ import RxSwift
 
 final class SettingViewReactor: Reactor {
     let initialState: State
-    let itemService: ItemServiceType
 
-    init(itemService: ItemServiceType) {
-        self.itemService = itemService
-        self.initialState = State()
+    init() {
+        let items: [SettingItem] = [
+            .acknowledgements(SettingItemCellReactor(title: "Acknowledgements")),
+            .version(SettingItemCellReactor(title: "Version", detail: AppInfo.shared.appVersion))
+        ]
+        self.initialState = State(items: items)
     }
 
     enum Action {
@@ -26,5 +28,6 @@ final class SettingViewReactor: Reactor {
     }
 
     struct State {
+        var items: [SettingItem]
     }
 }

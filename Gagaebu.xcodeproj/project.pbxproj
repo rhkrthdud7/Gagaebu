@@ -33,6 +33,10 @@
 		9CF0F4302439D0DA00279CF9 /* ItemViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0F42F2439D0DA00279CF9 /* ItemViewReactor.swift */; };
 		9CFA35EC2449D59F001117FD /* GagaebuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA35EB2449D59F001117FD /* GagaebuUITests.swift */; };
 		9CFA35F42449D5D9001117FD /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA35F32449D5D9001117FD /* SnapshotHelper.swift */; };
+		9CFA35F72449E2C4001117FD /* SettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA35F62449E2C4001117FD /* SettingSection.swift */; };
+		9CFA35F92449E362001117FD /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA35F82449E362001117FD /* SettingCell.swift */; };
+		9CFA35FC2449E5BE001117FD /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA35FB2449E5BE001117FD /* AppInfo.swift */; };
+		9CFA35FF2449ED41001117FD /* Pods-Gagaebu-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CFA35FE2449ED19001117FD /* Pods-Gagaebu-acknowledgements.plist */; };
 		BC174A12B491D95F864F5903 /* Pods_GagaebuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB947BA53C481A7F09632AA6 /* Pods_GagaebuTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +93,11 @@
 		9CFA35EB2449D59F001117FD /* GagaebuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GagaebuUITests.swift; sourceTree = "<group>"; };
 		9CFA35ED2449D59F001117FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CFA35F32449D5D9001117FD /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
+		9CFA35F62449E2C4001117FD /* SettingSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSection.swift; sourceTree = "<group>"; };
+		9CFA35F82449E362001117FD /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		9CFA35FB2449E5BE001117FD /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		9CFA35FD2449ECD2001117FD /* Pods-Gagaebu-acknowledgements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pods-Gagaebu-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-Gagaebu/Pods-Gagaebu-acknowledgements.plist"; sourceTree = "<group>"; };
+		9CFA35FE2449ED19001117FD /* Pods-Gagaebu-acknowledgements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pods-Gagaebu-acknowledgements.plist"; path = "../../Pods/Target Support Files/Pods-Gagaebu/Pods-Gagaebu-acknowledgements.plist"; sourceTree = "<group>"; };
 		B7DDCD27AFBC12E6CE355011 /* Pods-GagaebuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GagaebuTests.release.xcconfig"; path = "Target Support Files/Pods-GagaebuTests/Pods-GagaebuTests.release.xcconfig"; sourceTree = "<group>"; };
 		DB947BA53C481A7F09632AA6 /* Pods_GagaebuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GagaebuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31C7EC6C1EE039F3A78AC80 /* Pods-Gagaebu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gagaebu.debug.xcconfig"; path = "Target Support Files/Pods-Gagaebu/Pods-Gagaebu.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				60E9062FA1A29F1B7B9FA537 /* Pods_Gagaebu.framework */,
+				9CFA35FD2449ECD2001117FD /* Pods-Gagaebu-acknowledgements.plist */,
 				DB947BA53C481A7F09632AA6 /* Pods_GagaebuTests.framework */,
 			);
 			name = Frameworks;
@@ -227,17 +237,14 @@
 		9CEDC73A2425CA37006DD872 /* Gagaebu */ = {
 			isa = PBXGroup;
 			children = (
+				9CFA35FA2449E5AF001117FD /* App */,
 				9C16D72724383CE200F226AD /* Custom */,
 				9C16D72624383CD300F226AD /* Extensions */,
 				9C8CB230243B535300CC851A /* Service */,
+				9CFA35F52449E266001117FD /* Section */,
 				9C8FBC6A2441B5C600764E3A /* ViewControllers */,
 				9CF0F4312439D0FD00279CF9 /* View */,
-				9CEDC73B2425CA37006DD872 /* AppDelegate.swift */,
-				9C8FBC622441997500764E3A /* SceneDelegate.swift */,
-				9CEDC7442425CA38006DD872 /* Assets.xcassets */,
-				9C8FBC712441EB3000764E3A /* Colors.xcassets */,
-				9CEDC7462425CA38006DD872 /* LaunchScreen.storyboard */,
-				9CEDC7492425CA38006DD872 /* Info.plist */,
+				9CFA36002449EDD7001117FD /* Resources */,
 			);
 			path = Gagaebu;
 			sourceTree = "<group>";
@@ -247,6 +254,7 @@
 			children = (
 				9C8FBC682441B4FF00764E3A /* BaseTableViewCell.swift */,
 				9C8FBC642441B0AB00764E3A /* ListItemCell.swift */,
+				9CFA35F82449E362001117FD /* SettingCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -259,6 +267,36 @@
 				9CFA35ED2449D59F001117FD /* Info.plist */,
 			);
 			path = GagaebuUITests;
+			sourceTree = "<group>";
+		};
+		9CFA35F52449E266001117FD /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				9CFA35F62449E2C4001117FD /* SettingSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		9CFA35FA2449E5AF001117FD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9CEDC73B2425CA37006DD872 /* AppDelegate.swift */,
+				9C8FBC622441997500764E3A /* SceneDelegate.swift */,
+				9CFA35FB2449E5BE001117FD /* AppInfo.swift */,
+				9CEDC7462425CA38006DD872 /* LaunchScreen.storyboard */,
+				9CEDC7492425CA38006DD872 /* Info.plist */,
+				9CFA35FE2449ED19001117FD /* Pods-Gagaebu-acknowledgements.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9CFA36002449EDD7001117FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9CEDC7442425CA38006DD872 /* Assets.xcassets */,
+				9C8FBC712441EB3000764E3A /* Colors.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CFA35FF2449ED41001117FD /* Pods-Gagaebu-acknowledgements.plist in Resources */,
 				9C8FBC722441EB3000764E3A /* Colors.xcassets in Resources */,
 				9CEDC7482425CA38006DD872 /* LaunchScreen.storyboard in Resources */,
 				9CEDC7452425CA38006DD872 /* Assets.xcassets in Resources */,
@@ -448,6 +487,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Gagaebu/Pods-Gagaebu-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AcknowList/AcknowList.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactorKit/ReactorKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -466,6 +506,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AcknowList.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactorKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -525,6 +566,7 @@
 				9C8CB236243C0ABD00CC851A /* ItemService.swift in Sources */,
 				9CEDC7402425CA37006DD872 /* ListViewController.swift in Sources */,
 				9C8FBC6E2441C20F00764E3A /* Int+.swift in Sources */,
+				9CFA35FC2449E5BE001117FD /* AppInfo.swift in Sources */,
 				9CF0F4302439D0DA00279CF9 /* ItemViewReactor.swift in Sources */,
 				9CA30BB72442DAB300286A57 /* NavigationMap.swift in Sources */,
 				9CA30BB92442F3C000286A57 /* SettingViewController.swift in Sources */,
@@ -533,9 +575,11 @@
 				9CEDC73C2425CA37006DD872 /* AppDelegate.swift in Sources */,
 				9C8FBC6C2441BACD00764E3A /* BaseViewController.swift in Sources */,
 				9CF0F42B2438696100279CF9 /* ResizableCollectionView.swift in Sources */,
+				9CFA35F92449E362001117FD /* SettingCell.swift in Sources */,
 				9CF0F42E2439D09B00279CF9 /* ListViewReactor.swift in Sources */,
 				9C8FBC662441B0AB00764E3A /* ListItemCell.swift in Sources */,
 				9C16D72924383CF600F226AD /* BorderedTextField.swift in Sources */,
+				9CFA35F72449E2C4001117FD /* SettingSection.swift in Sources */,
 				9C16D724243836AF00F226AD /* Date+.swift in Sources */,
 				9CA30BBB2442F44800286A57 /* SettingViewReactor.swift in Sources */,
 				9C8FBC692441B4FF00764E3A /* BaseTableViewCell.swift in Sources */,
@@ -747,7 +791,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P37C4Y6Q82;
-				INFOPLIST_FILE = Gagaebu/Info.plist;
+				INFOPLIST_FILE = Gagaebu/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -767,7 +811,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P37C4Y6Q82;
-				INFOPLIST_FILE = Gagaebu/Info.plist;
+				INFOPLIST_FILE = Gagaebu/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
