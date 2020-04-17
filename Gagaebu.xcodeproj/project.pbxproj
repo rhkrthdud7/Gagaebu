@@ -31,11 +31,20 @@
 		9CF0F42B2438696100279CF9 /* ResizableCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0F42A2438696000279CF9 /* ResizableCollectionView.swift */; };
 		9CF0F42E2439D09B00279CF9 /* ListViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0F42D2439D09B00279CF9 /* ListViewReactor.swift */; };
 		9CF0F4302439D0DA00279CF9 /* ItemViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF0F42F2439D0DA00279CF9 /* ItemViewReactor.swift */; };
+		9CFA35EC2449D59F001117FD /* GagaebuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA35EB2449D59F001117FD /* GagaebuUITests.swift */; };
+		9CFA35F42449D5D9001117FD /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA35F32449D5D9001117FD /* SnapshotHelper.swift */; };
 		BC174A12B491D95F864F5903 /* Pods_GagaebuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB947BA53C481A7F09632AA6 /* Pods_GagaebuTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		9C2949AF244703F500604358 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CEDC7302425CA37006DD872 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CEDC7372425CA37006DD872;
+			remoteInfo = Gagaebu;
+		};
+		9CFA35EE2449D59F001117FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9CEDC7302425CA37006DD872 /* Project object */;
 			proxyType = 1;
@@ -76,6 +85,10 @@
 		9CF0F42A2438696000279CF9 /* ResizableCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableCollectionView.swift; sourceTree = "<group>"; };
 		9CF0F42D2439D09B00279CF9 /* ListViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewReactor.swift; sourceTree = "<group>"; };
 		9CF0F42F2439D0DA00279CF9 /* ItemViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewReactor.swift; sourceTree = "<group>"; };
+		9CFA35E92449D59F001117FD /* GagaebuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GagaebuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CFA35EB2449D59F001117FD /* GagaebuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GagaebuUITests.swift; sourceTree = "<group>"; };
+		9CFA35ED2449D59F001117FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CFA35F32449D5D9001117FD /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		B7DDCD27AFBC12E6CE355011 /* Pods-GagaebuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GagaebuTests.release.xcconfig"; path = "Target Support Files/Pods-GagaebuTests/Pods-GagaebuTests.release.xcconfig"; sourceTree = "<group>"; };
 		DB947BA53C481A7F09632AA6 /* Pods_GagaebuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GagaebuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31C7EC6C1EE039F3A78AC80 /* Pods-Gagaebu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gagaebu.debug.xcconfig"; path = "Target Support Files/Pods-Gagaebu/Pods-Gagaebu.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +108,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D2D9F0712E560589F42FD90 /* Pods_Gagaebu.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CFA35E62449D59F001117FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +206,7 @@
 			children = (
 				9CEDC73A2425CA37006DD872 /* Gagaebu */,
 				9C2949AB244703F500604358 /* GagaebuTests */,
+				9CFA35EA2449D59F001117FD /* GagaebuUITests */,
 				9CEDC7392425CA37006DD872 /* Products */,
 				6BFA7340AF2B4CA43BA5C972 /* Pods */,
 				4A4F2DF947A3654508951619 /* Frameworks */,
@@ -198,6 +219,7 @@
 			children = (
 				9CEDC7382425CA37006DD872 /* Gagaebu.app */,
 				9C2949AA244703F500604358 /* GagaebuTests.xctest */,
+				9CFA35E92449D59F001117FD /* GagaebuUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,6 +249,16 @@
 				9C8FBC642441B0AB00764E3A /* ListItemCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9CFA35EA2449D59F001117FD /* GagaebuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9CFA35F32449D5D9001117FD /* SnapshotHelper.swift */,
+				9CFA35EB2449D59F001117FD /* GagaebuUITests.swift */,
+				9CFA35ED2449D59F001117FD /* Info.plist */,
+			);
+			path = GagaebuUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +303,24 @@
 			productReference = 9CEDC7382425CA37006DD872 /* Gagaebu.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9CFA35E82449D59F001117FD /* GagaebuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CFA35F22449D59F001117FD /* Build configuration list for PBXNativeTarget "GagaebuUITests" */;
+			buildPhases = (
+				9CFA35E52449D59F001117FD /* Sources */,
+				9CFA35E62449D59F001117FD /* Frameworks */,
+				9CFA35E72449D59F001117FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9CFA35EF2449D59F001117FD /* PBXTargetDependency */,
+			);
+			name = GagaebuUITests;
+			productName = GagaebuUITests;
+			productReference = 9CFA35E92449D59F001117FD /* GagaebuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -287,6 +337,10 @@
 					};
 					9CEDC7372425CA37006DD872 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					9CFA35E82449D59F001117FD = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 9CEDC7372425CA37006DD872;
 					};
 				};
 			};
@@ -306,6 +360,7 @@
 			targets = (
 				9CEDC7372425CA37006DD872 /* Gagaebu */,
 				9C2949A9244703F500604358 /* GagaebuTests */,
+				9CFA35E82449D59F001117FD /* GagaebuUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -325,6 +380,13 @@
 				9C8FBC722441EB3000764E3A /* Colors.xcassets in Resources */,
 				9CEDC7482425CA38006DD872 /* LaunchScreen.storyboard in Resources */,
 				9CEDC7452425CA38006DD872 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CFA35E72449D59F001117FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +544,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9CFA35E52449D59F001117FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CFA35EC2449D59F001117FD /* GagaebuUITests.swift in Sources */,
+				9CFA35F42449D5D9001117FD /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -489,6 +560,11 @@
 			isa = PBXTargetDependency;
 			target = 9CEDC7372425CA37006DD872 /* Gagaebu */;
 			targetProxy = 9C2949AF244703F500604358 /* PBXContainerItemProxy */;
+		};
+		9CFA35EF2449D59F001117FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CEDC7372425CA37006DD872 /* Gagaebu */;
+			targetProxy = 9CFA35EE2449D59F001117FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -704,6 +780,44 @@
 			};
 			name = Release;
 		};
+		9CFA35F02449D59F001117FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GagaebuUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soso.GagaebuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gagaebu;
+			};
+			name = Debug;
+		};
+		9CFA35F12449D59F001117FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GagaebuUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.soso.GagaebuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gagaebu;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -730,6 +844,15 @@
 			buildConfigurations = (
 				9CEDC74D2425CA38006DD872 /* Debug */,
 				9CEDC74E2425CA38006DD872 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CFA35F22449D59F001117FD /* Build configuration list for PBXNativeTarget "GagaebuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CFA35F02449D59F001117FD /* Debug */,
+				9CFA35F12449D59F001117FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
