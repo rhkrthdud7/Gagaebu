@@ -2,11 +2,11 @@ PODS:
   - AcknowList (1.9.3)
   - ReactorKit (2.0.1):
     - RxSwift (~> 5.0)
-  - Realm (4.3.2):
-    - Realm/Headers (= 4.3.2)
-  - Realm/Headers (4.3.2)
-  - RealmSwift (4.3.2):
-    - Realm (= 4.3.2)
+  - Realm (4.4.1):
+    - Realm/Headers (= 4.4.1)
+  - Realm/Headers (4.4.1)
+  - RealmSwift (4.4.1):
+    - Realm (= 4.4.1)
   - ReusableKit (3.0.0):
     - ReusableKit/Core (= 3.0.0)
   - ReusableKit/Core (3.0.0)
@@ -36,7 +36,7 @@ PODS:
 DEPENDENCIES:
   - AcknowList (~> 1.9.3)
   - ReactorKit (~> 2.0.1)
-  - RealmSwift (~> 4.3.2)
+  - RealmSwift (~> 4.4.1)
   - ReusableKit (~> 3.0.0)
   - ReusableKit/RxSwift
   - RxCocoa (~> 5.0.1)
@@ -68,8 +68,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AcknowList: a3ee7cfba2c45cf9d07d1b18fe729a5bcc518366
   ReactorKit: a63c5e11e0fd32d59d672e54178b0ed2876b764b
-  Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
-  RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
+  Realm: 4eb04d7487bd43c0581256f40b424eafb711deff
+  RealmSwift: 3eb8924ff7100df5928c7602f71d0fec51e7c9c5
   ReusableKit: e5f853ad4652e411f96b6119b2488afa12929be6
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxGesture: a3f8dd6adf078110ed5e1c9c30d09d705a09852e
@@ -81,6 +81,6 @@ SPEC CHECKSUMS:
   Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
 
-PODFILE CHECKSUM: 73eb47ef927b168a9a683af1a91f47eb91c3b38c
+PODFILE CHECKSUM: b3429876f9e3c5397ba8b1ccd412c52faa66f7c9
 
 COCOAPODS: 1.6.1

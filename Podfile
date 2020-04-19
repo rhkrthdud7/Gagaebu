@@ -7,7 +7,7 @@ inhibit_all_warnings!
 target 'Gagaebu' do
   pod 'ReactorKit', '~> 2.0.1'
   
-  pod 'RealmSwift', '~> 4.3.2'
+  pod 'RealmSwift', '~> 4.4.1'
   
   pod 'RxSwift', '~> 5.0.1'
   pod 'RxCocoa', '~> 5.0.1'
