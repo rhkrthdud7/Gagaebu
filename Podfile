@@ -1,7 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '13.0'
 use_frameworks!
-#use_modular_headers!
 inhibit_all_warnings!
 
 target 'Gagaebu' do

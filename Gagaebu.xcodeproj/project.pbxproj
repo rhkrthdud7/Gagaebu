@@ -23,6 +23,7 @@
 		9CA30BB72442DAB300286A57 /* NavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA30BB62442DAB300286A57 /* NavigationMap.swift */; };
 		9CA30BB92442F3C000286A57 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA30BB82442F3C000286A57 /* SettingViewController.swift */; };
 		9CA30BBB2442F44800286A57 /* SettingViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA30BBA2442F44800286A57 /* SettingViewReactor.swift */; };
+		9CC2766C2450773600C29ED1 /* Pods-Gagaebu-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CC27668245075FD00C29ED1 /* Pods-Gagaebu-acknowledgements.plist */; };
 		9CEDC73C2425CA37006DD872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEDC73B2425CA37006DD872 /* AppDelegate.swift */; };
 		9CEDC7402425CA37006DD872 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEDC73F2425CA37006DD872 /* ListViewController.swift */; };
 		9CEDC7452425CA38006DD872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CEDC7442425CA38006DD872 /* Assets.xcassets */; };
@@ -36,7 +37,6 @@
 		9CFA35F72449E2C4001117FD /* SettingSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA35F62449E2C4001117FD /* SettingSection.swift */; };
 		9CFA35F92449E362001117FD /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA35F82449E362001117FD /* SettingCell.swift */; };
 		9CFA35FC2449E5BE001117FD /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFA35FB2449E5BE001117FD /* AppInfo.swift */; };
-		9CFA35FF2449ED41001117FD /* Pods-Gagaebu-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CFA35FE2449ED19001117FD /* Pods-Gagaebu-acknowledgements.plist */; };
 		BC174A12B491D95F864F5903 /* Pods_GagaebuTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB947BA53C481A7F09632AA6 /* Pods_GagaebuTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +79,7 @@
 		9CA30BB62442DAB300286A57 /* NavigationMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMap.swift; sourceTree = "<group>"; };
 		9CA30BB82442F3C000286A57 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9CA30BBA2442F44800286A57 /* SettingViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewReactor.swift; sourceTree = "<group>"; };
+		9CC27668245075FD00C29ED1 /* Pods-Gagaebu-acknowledgements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pods-Gagaebu-acknowledgements.plist"; path = "../../Pods/Target Support Files/Pods-Gagaebu/Pods-Gagaebu-acknowledgements.plist"; sourceTree = "<group>"; };
 		9CEDC7382425CA37006DD872 /* Gagaebu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gagaebu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEDC73B2425CA37006DD872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CEDC73F2425CA37006DD872 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +98,6 @@
 		9CFA35F82449E362001117FD /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		9CFA35FB2449E5BE001117FD /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		9CFA35FD2449ECD2001117FD /* Pods-Gagaebu-acknowledgements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pods-Gagaebu-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-Gagaebu/Pods-Gagaebu-acknowledgements.plist"; sourceTree = "<group>"; };
-		9CFA35FE2449ED19001117FD /* Pods-Gagaebu-acknowledgements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Pods-Gagaebu-acknowledgements.plist"; path = "../../Pods/Target Support Files/Pods-Gagaebu/Pods-Gagaebu-acknowledgements.plist"; sourceTree = "<group>"; };
 		B7DDCD27AFBC12E6CE355011 /* Pods-GagaebuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GagaebuTests.release.xcconfig"; path = "Target Support Files/Pods-GagaebuTests/Pods-GagaebuTests.release.xcconfig"; sourceTree = "<group>"; };
 		DB947BA53C481A7F09632AA6 /* Pods_GagaebuTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GagaebuTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E31C7EC6C1EE039F3A78AC80 /* Pods-Gagaebu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gagaebu.debug.xcconfig"; path = "Target Support Files/Pods-Gagaebu/Pods-Gagaebu.debug.xcconfig"; sourceTree = "<group>"; };
@@ -285,7 +285,7 @@
 				9CFA35FB2449E5BE001117FD /* AppInfo.swift */,
 				9CEDC7462425CA38006DD872 /* LaunchScreen.storyboard */,
 				9CEDC7492425CA38006DD872 /* Info.plist */,
-				9CFA35FE2449ED19001117FD /* Pods-Gagaebu-acknowledgements.plist */,
+				9CC27668245075FD00C29ED1 /* Pods-Gagaebu-acknowledgements.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -415,7 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CFA35FF2449ED41001117FD /* Pods-Gagaebu-acknowledgements.plist in Resources */,
+				9CC2766C2450773600C29ED1 /* Pods-Gagaebu-acknowledgements.plist in Resources */,
 				9C8FBC722441EB3000764E3A /* Colors.xcassets in Resources */,
 				9CEDC7482425CA38006DD872 /* LaunchScreen.storyboard in Resources */,
 				9CEDC7452425CA38006DD872 /* Assets.xcassets in Resources */,
@@ -790,15 +790,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P37C4Y6Q82;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PA8R36ZNU9;
 				INFOPLIST_FILE = Gagaebu/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.soso.Practice;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.rhkrthdud7.Gagaebu;
+				PRODUCT_NAME = Gagaebu;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -810,15 +811,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P37C4Y6Q82;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PA8R36ZNU9;
 				INFOPLIST_FILE = Gagaebu/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.soso.Practice;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = io.rhkrthdud7.Gagaebu;
+				PRODUCT_NAME = Gagaebu;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
