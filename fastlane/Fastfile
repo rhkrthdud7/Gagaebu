@@ -1,0 +1,23 @@
+default_platform(:ios)
+platform :ios do
+  desc 'Deploys Gagaebu to App Store'
+  lane :release do
+    match(
+     type: "appstore"
+    )
+    gym(
+     scheme: "Gagaebu",
+     clean: true
+    )
+    deliver(
+      submit_for_review: true,
+      reject_if_possible: true,
+      skip_screenshots: true,
+      skip_metadata: false,
+      force: true,
+      release_notes: {
+        'ko' => "버그 수정"
+      }
+    )
+  end
+end

@@ -39,7 +39,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9CEDC7372425CA37006DD872"
-            BuildableName = "&#x1100;&#x1161;&#x1100;&#x1168;&#x1107;&#x116e;.app"
+            BuildableName = "Gagaebu.app"
             BlueprintName = "Gagaebu"
             ReferencedContainer = "container:Gagaebu.xcodeproj">
          </BuildableReference>
@@ -55,7 +55,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9CEDC7372425CA37006DD872"
-            BuildableName = "&#x1100;&#x1161;&#x1100;&#x1168;&#x1107;&#x116e;.app"
+            BuildableName = "Gagaebu.app"
             BlueprintName = "Gagaebu"
             ReferencedContainer = "container:Gagaebu.xcodeproj">
          </BuildableReference>

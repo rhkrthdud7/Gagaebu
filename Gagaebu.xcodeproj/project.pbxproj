@@ -789,7 +789,8 @@
 			baseConfigurationReference = E31C7EC6C1EE039F3A78AC80 /* Pods-Gagaebu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PA8R36ZNU9;
 				INFOPLIST_FILE = Gagaebu/App/Info.plist;
@@ -797,11 +798,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.rhkrthdud7.Gagaebu;
 				PRODUCT_NAME = Gagaebu;
+				PROVISIONING_PROFILE_SPECIFIER = "match Development io.rhkrthdud7.Gagaebu";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -810,7 +813,8 @@
 			baseConfigurationReference = 0E40F9E371818118EAA07B26 /* Pods-Gagaebu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PA8R36ZNU9;
 				INFOPLIST_FILE = Gagaebu/App/Info.plist;
@@ -818,11 +822,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.rhkrthdud7.Gagaebu;
 				PRODUCT_NAME = Gagaebu;
+				PROVISIONING_PROFILE_SPECIFIER = "match Development io.rhkrthdud7.Gagaebu";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};

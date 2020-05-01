@@ -1,0 +1,7 @@
+app_identifier "io.rhkrthdud7.Gagaebu"	# The bundle identifier of your app
+apple_id "rhkrthdud7@naver.com"			# Your Apple email address
+itc_team_id "118540853"					# App Store Connect ID
+team_id "PA8R36ZNU9"					# Team ID
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
