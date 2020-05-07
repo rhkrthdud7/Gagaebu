@@ -77,7 +77,7 @@ class ListViewController: BaseViewController, View {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
 
         tableView.tableHeaderView = header
-        tableView.backgroundView = labelEmpty
+        tableView.addSubview(labelEmpty)
         header.addSubview(segmentedControl)
         header.addSubview(labelTotal)
     }
@@ -93,6 +93,11 @@ class ListViewController: BaseViewController, View {
         labelTotal.snp.makeConstraints {
             $0.top.equalTo(segmentedControl.snp.bottom).offset(10)
             $0.leading.trailing.equalTo(segmentedControl)
+        }
+        labelEmpty.snp.makeConstraints {
+            $0.top.equalTo(header.snp.bottom)
+            $0.leading.trailing.equalTo(header)
+            $0.height.equalTo(200)
         }
     }
 

@@ -1,5 +1,5 @@
 PODS:
-  - AcknowList (1.9.3)
+  - AcknowList (1.9.4)
   - ReactorKit (2.0.1):
     - RxSwift (~> 5.0)
   - Realm (4.4.1):
@@ -14,18 +14,18 @@ PODS:
     - ReusableKit/Core
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
-  - RxCocoa (5.0.1):
+  - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
-  - RxGesture (3.0.1):
-    - RxCocoa (~> 5.0)
-    - RxSwift (~> 5.0)
+  - RxGesture (3.0.2):
+    - RxCocoa (~> 5.1)
+    - RxSwift (~> 5.1)
   - RxOptional (4.1.0):
     - RxCocoa (~> 5)
     - RxSwift (~> 5)
-  - RxRelay (5.0.1):
+  - RxRelay (5.1.1):
     - RxSwift (~> 5)
-  - RxSwift (5.0.1)
+  - RxSwift (5.1.1)
   - RxViewController (1.0.0):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
@@ -39,17 +39,17 @@ DEPENDENCIES:
   - RealmSwift (~> 4.4.1)
   - ReusableKit (~> 3.0.0)
   - ReusableKit/RxSwift
-  - RxCocoa (~> 5.0.1)
+  - RxCocoa (~> 5.1.1)
   - RxGesture (~> 3.0.1)
   - RxOptional (~> 4.1.0)
-  - RxSwift (~> 5.0.1)
+  - RxSwift (~> 5.1.1)
   - RxViewController (~> 1.0.0)
   - SnapKit (~> 5.0.1)
   - Then (~> 2.6.0)
   - URLNavigator (~> 2.3.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AcknowList
     - ReactorKit
     - Realm
@@ -66,21 +66,21 @@ SPEC REPOS:
     - URLNavigator
 
 SPEC CHECKSUMS:
-  AcknowList: a3ee7cfba2c45cf9d07d1b18fe729a5bcc518366
+  AcknowList: a236060b8c33141d7756814fd21d5dab477fc193
   ReactorKit: a63c5e11e0fd32d59d672e54178b0ed2876b764b
   Realm: 4eb04d7487bd43c0581256f40b424eafb711deff
   RealmSwift: 3eb8924ff7100df5928c7602f71d0fec51e7c9c5
   ReusableKit: e5f853ad4652e411f96b6119b2488afa12929be6
-  RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
-  RxGesture: a3f8dd6adf078110ed5e1c9c30d09d705a09852e
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
   RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
-  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
-  RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
 
-PODFILE CHECKSUM: b3429876f9e3c5397ba8b1ccd412c52faa66f7c9
+PODFILE CHECKSUM: 148671ee45b85687912918b54e8d24238428b68c
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.1

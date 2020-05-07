@@ -8,8 +8,8 @@ target 'Gagaebu' do
   
   pod 'RealmSwift', '~> 4.4.1'
   
-  pod 'RxSwift', '~> 5.0.1'
-  pod 'RxCocoa', '~> 5.0.1'
+  pod 'RxSwift', '~> 5.1.1'
+  pod 'RxCocoa', '~> 5.1.1'
   pod 'RxViewController', '~> 1.0.0'
   pod 'RxOptional', '~> 4.1.0'
   pod 'RxGesture', '~> 3.0.1'
