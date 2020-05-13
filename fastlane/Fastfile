@@ -12,6 +12,7 @@ platform :ios do
     deliver(
       submit_for_review: true,
       reject_if_possible: true,
+      automatic_release: true,
       skip_screenshots: true,
       skip_metadata: false,
       force: true,
