@@ -15,6 +15,7 @@ final class SettingViewReactor: Reactor {
 
     init() {
         let items: [SettingItem] = [
+            .appstore(SettingItemCellReactor(title: "Rate App")),
             .acknowledgements(SettingItemCellReactor(title: "Acknowledgements")),
             .version(SettingItemCellReactor(title: "Version", detail: AppInfo.shared.appVersion))
         ]

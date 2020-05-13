@@ -10,6 +10,7 @@ import Foundation
 import ReactorKit
 
 enum SettingItem {
+    case appstore(SettingItemCellReactor)
     case acknowledgements(SettingItemCellReactor)
     case version(SettingItemCellReactor)
 }

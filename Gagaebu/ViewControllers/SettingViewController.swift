@@ -55,7 +55,8 @@ class SettingViewController: BaseViewController, View {
             .asObservable()
             .bind(to: tableView.rx.items(Reusable.settingCell)) { (row, item, cell) in
                 switch item {
-                case .acknowledgements(let reactor),
+                case .appstore(let reactor),
+                     .acknowledgements(let reactor),
                      .version(let reactor):
                     cell.reactor = reactor
                 }
@@ -65,6 +66,11 @@ class SettingViewController: BaseViewController, View {
             .subscribe(onNext: { [weak self] indexPath in
                 let item = reactor.currentState.items[indexPath.row]
                 switch item {
+                case .appstore:
+                    if let url = URL(string: "itms-apps://itunes.apple.com/app/1509453738"),
+                        UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
                 case .acknowledgements:
                     let vc = AcknowListViewController()
                     self?.navigationController?.pushViewController(vc, animated: true)
