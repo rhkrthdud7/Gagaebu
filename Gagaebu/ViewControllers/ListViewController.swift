@@ -84,7 +84,7 @@ class ListViewController: BaseViewController, View {
 
     override func setupConstraints() {
         tableView.snp.makeConstraints({
-            $0.edges.equalToSuperview()
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
         })
         segmentedControl.snp.makeConstraints {
             $0.top.leading.equalToSuperview().inset(16)
