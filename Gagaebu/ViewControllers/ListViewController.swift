@@ -41,15 +41,21 @@ class ListViewController: BaseViewController, View {
     let addButton = UIBarButtonItem(title: "추가", style: .plain, target: self, action: nil)
     let header = UIView().then {
         let width = UIScreen.main.bounds.width
-        $0.frame = CGRect(x: 0, y: 0, width: width, height: 90)
+        $0.frame = CGRect(x: 0, y: 0, width: width, height: 150)
     }
     let segmentedControl = UISegmentedControl().then {
         $0.insertSegment(withTitle: Transaction.income.title, at: 0, animated: false)
         $0.insertSegment(withTitle: Transaction.outcome.title, at: 0, animated: false)
         $0.selectedSegmentIndex = 0
     }
+    let labelOutcome = UILabel().then {
+        $0.textAlignment = .left
+    }
+    let labelIncome = UILabel().then {
+        $0.textAlignment = .left
+    }
     let labelTotal = UILabel().then {
-        $0.textAlignment = .right
+        $0.textAlignment = .left
     }
     let labelEmpty = UILabel().then {
         $0.text = "새로운 아이템을 등록해주세요 :)"
@@ -79,6 +85,8 @@ class ListViewController: BaseViewController, View {
         tableView.tableHeaderView = header
         tableView.addSubview(labelEmpty)
         header.addSubview(segmentedControl)
+        header.addSubview(labelOutcome)
+        header.addSubview(labelIncome)
         header.addSubview(labelTotal)
     }
 
@@ -90,8 +98,16 @@ class ListViewController: BaseViewController, View {
             $0.top.leading.equalToSuperview().inset(16)
             $0.trailing.equalToSuperview().inset(16).priority(999)
         }
-        labelTotal.snp.makeConstraints {
+        labelOutcome.snp.makeConstraints {
             $0.top.equalTo(segmentedControl.snp.bottom).offset(10)
+            $0.leading.trailing.equalTo(segmentedControl)
+        }
+        labelIncome.snp.makeConstraints {
+            $0.top.equalTo(labelOutcome.snp.bottom).offset(10)
+            $0.leading.trailing.equalTo(segmentedControl)
+        }
+        labelTotal.snp.makeConstraints {
+            $0.top.equalTo(labelIncome.snp.bottom).offset(10)
             $0.leading.trailing.equalTo(segmentedControl)
         }
         labelEmpty.snp.makeConstraints {
@@ -151,7 +167,18 @@ class ListViewController: BaseViewController, View {
             .disposed(by: disposeBag)
 
         reactor.state
-            .map { "총: \($0.totalAmount.currencyFormattedText)" }
+            .map { "지출: \($0.totalOutcome.currencyFormattedText)" }
+            .bind(to: labelOutcome.rx.text)
+            .disposed(by: disposeBag)
+        
+        reactor.state
+            .map { "수입: \($0.totalIncome.currencyFormattedText)" }
+            .bind(to: labelIncome.rx.text)
+            .disposed(by: disposeBag)
+        
+        reactor.state
+            .map { $0.totalIncome - $0.totalOutcome }
+            .map { "합계: \($0.currencyFormattedText)" }
             .bind(to: labelTotal.rx.text)
             .disposed(by: disposeBag)
 

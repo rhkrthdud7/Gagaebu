@@ -32,7 +32,8 @@ final class ListViewReactor: Reactor {
     struct State {
         var items: [Item] = []
         var transaction: Transaction = .outcome
-        var totalAmount: Int = 0
+        var totalIncome: Int = 0
+        var totalOutcome: Int = 0
         var isEmptyLabelHidden: Bool = true
     }
 
@@ -40,9 +41,9 @@ final class ListViewReactor: Reactor {
         switch action {
         case .refresh(let transaction):
             let update = Observable.just(Mutation.setTransaction(transaction))
-            let set = itemService.fetchItems(.transaction(transaction))
+            let set = itemService.fetchItems(nil)
                 .map { Mutation.setItems($0) }
-            return Observable.concat([set, update])
+            return Observable.concat([update, set])
         }
     }
 
@@ -50,8 +51,15 @@ final class ListViewReactor: Reactor {
         var newState = state
         switch mutation {
         case .setItems(let items):
-            newState.items = items
-            newState.totalAmount = items.map({ $0.cost }).reduce(0, +)
+            let income = items.filter { $0.transaction == Transaction.income }
+            let outcome = items.filter { $0.transaction == Transaction.outcome }
+            if newState.transaction == .income {
+                newState.items = income
+            } else {
+                newState.items = outcome
+            }
+            newState.totalIncome = income.map({ $0.cost }).reduce(0, +)
+            newState.totalOutcome = outcome.map({ $0.cost }).reduce(0, +)
             newState.isEmptyLabelHidden = !items.isEmpty
         case .setTransaction(let transaction):
             newState.transaction = transaction

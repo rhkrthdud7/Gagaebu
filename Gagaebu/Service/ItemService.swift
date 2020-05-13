@@ -15,7 +15,7 @@ enum ItemPredicate {
 }
 
 protocol ItemServiceType {
-    func fetchItems(_ predicate: ItemPredicate) -> Observable<[Item]>
+    func fetchItems(_ predicate: ItemPredicate?) -> Observable<[Item]>
     func create(_ title: String, _ cost: Int, _ date: Date, _ transaction: Transaction) -> Observable<Void>
     func update(_ id: String, _ title: String, _ cost: Int, _ date: Date, _ transaction: Transaction) -> Observable<Void>
     func delete(_ id: String) -> Observable<Void>
@@ -23,7 +23,7 @@ protocol ItemServiceType {
 }
 
 class ItemService: ItemServiceType {
-    func fetchItems(_ predicate: ItemPredicate) -> Observable<[Item]> {
+    func fetchItems(_ predicate: ItemPredicate?) -> Observable<[Item]> {
         let realm = try! Realm()
         let items = realm.objects(Item.self)
             .sorted(byKeyPath: "date", ascending: false)
