@@ -60,7 +60,7 @@ final class ListViewReactor: Reactor {
             }
             newState.totalIncome = income.map({ $0.cost }).reduce(0, +)
             newState.totalOutcome = outcome.map({ $0.cost }).reduce(0, +)
-            newState.isEmptyLabelHidden = !items.isEmpty
+            newState.isEmptyLabelHidden = !newState.items.isEmpty
         case .setTransaction(let transaction):
             newState.transaction = transaction
         }
