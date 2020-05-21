@@ -64,12 +64,9 @@ class ItemViewController: BaseViewController, ReactorKit.View {
     }
 
     override func setupConstraints() {
-        let scrollView = UIScrollView().then {
-            $0.alwaysBounceVertical = true
-        }
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
 
         let viewContent = UIView().then {
@@ -78,7 +75,7 @@ class ItemViewController: BaseViewController, ReactorKit.View {
         scrollView.addSubview(viewContent)
         viewContent.snp.makeConstraints {
             $0.edges.equalToSuperview()
-            $0.width.equalTo(view)
+            $0.width.equalTo(scrollView)
         }
 
         viewContent.addSubview(segmentedControl)
