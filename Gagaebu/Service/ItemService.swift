@@ -12,6 +12,7 @@ import RxSwift
 
 enum ItemPredicate {
     case transaction(Transaction)
+    case period(Date, Date)
 }
 
 protocol ItemServiceType {
@@ -93,6 +94,8 @@ extension Results {
         switch predicate {
         case .transaction(let transaction):
             return self.filter("transactionValue == %d", transaction.rawValue)
+        case .period(let start, let end):
+            return self.filter("date > %@ && date < %@", start, end)
         }
     }
 }
