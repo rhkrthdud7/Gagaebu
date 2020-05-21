@@ -20,6 +20,9 @@ PODS:
   - RxGesture (3.0.2):
     - RxCocoa (~> 5.1)
     - RxSwift (~> 5.1)
+  - RxKeyboard (1.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - RxOptional (4.1.0):
     - RxCocoa (~> 5)
     - RxSwift (~> 5)
@@ -41,6 +44,7 @@ DEPENDENCIES:
   - ReusableKit/RxSwift
   - RxCocoa (~> 5.1.1)
   - RxGesture (~> 3.0.1)
+  - RxKeyboard (~> 1.0.0)
   - RxOptional (~> 4.1.0)
   - RxSwift (~> 5.1.1)
   - RxViewController (~> 1.0.0)
@@ -57,6 +61,7 @@ SPEC REPOS:
     - ReusableKit
     - RxCocoa
     - RxGesture
+    - RxKeyboard
     - RxOptional
     - RxRelay
     - RxSwift
@@ -73,6 +78,7 @@ SPEC CHECKSUMS:
   ReusableKit: e5f853ad4652e411f96b6119b2488afa12929be6
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
+  RxKeyboard: 6683c4344304a00f943c158bd8a43ce5469c82a7
   RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
@@ -81,6 +87,6 @@ SPEC CHECKSUMS:
   Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
   URLNavigator: 2593c0e2d293732ec5c44503cf54dceba1a68085
 
-PODFILE CHECKSUM: 148671ee45b85687912918b54e8d24238428b68c
+PODFILE CHECKSUM: fa078b64293a20cdbf4791ed4d6ce540f410e155
 
 COCOAPODS: 1.9.1
