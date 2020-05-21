@@ -42,6 +42,17 @@ class ListViewController: BaseViewController, View {
     let header = UIView().then {
         $0.backgroundColor = .clear
     }
+    let buttonPrevious = UIButton(type: .system).then {
+        $0.setImage(#imageLiteral(resourceName: "icon_back"), for: .normal)
+        $0.tintColor = .label
+    }
+    let buttonNext = UIButton(type: .system).then {
+        $0.setImage(#imageLiteral(resourceName: "icon_next"), for: .normal)
+        $0.tintColor = .label
+    }
+    let labelCurrent = UILabel().then {
+        $0.textAlignment = .center
+    }
     let segmentedControl = UISegmentedControl().then {
         $0.insertSegment(withTitle: Transaction.income.title, at: 0, animated: false)
         $0.insertSegment(withTitle: Transaction.outcome.title, at: 0, animated: false)
@@ -83,6 +94,9 @@ class ListViewController: BaseViewController, View {
 
         tableView.tableHeaderView = header
         tableView.addSubview(labelEmpty)
+        header.addSubview(buttonPrevious)
+        header.addSubview(labelCurrent)
+        header.addSubview(buttonNext)
         header.addSubview(segmentedControl)
         header.addSubview(labelOutcome)
         header.addSubview(labelIncome)
@@ -93,8 +107,21 @@ class ListViewController: BaseViewController, View {
         tableView.snp.makeConstraints({
             $0.edges.equalTo(view.safeAreaLayoutGuide)
         })
+        buttonPrevious.snp.makeConstraints {
+            $0.top.leading.equalToSuperview()
+            $0.height.width.equalTo(50)
+        }
+        buttonNext.snp.makeConstraints {
+            $0.top.trailing.equalToSuperview()
+            $0.height.width.equalTo(50)
+        }
+        labelCurrent.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.centerY.equalTo(buttonPrevious)
+        }
         segmentedControl.snp.makeConstraints {
-            $0.top.leading.equalToSuperview().inset(16)
+            $0.top.equalToSuperview().inset(16 + 50)
+            $0.leading.equalToSuperview().inset(16)
             $0.trailing.equalToSuperview().inset(16).priority(999)
         }
         labelOutcome.snp.makeConstraints {
@@ -110,7 +137,7 @@ class ListViewController: BaseViewController, View {
             $0.leading.trailing.equalTo(segmentedControl)
             $0.bottom.equalToSuperview()
         }
-        
+
         header.snp.makeConstraints {
             $0.centerX.width.equalToSuperview()
         }
@@ -131,7 +158,17 @@ class ListViewController: BaseViewController, View {
             .map(Reactor.Action.refresh)
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
-
+        
+        buttonPrevious.rx.tap
+            .map { Reactor.Action.previous }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        buttonNext.rx.tap
+            .map { Reactor.Action.next }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         segmentedControl.rx.controlEvent(.valueChanged)
             .withLatestFrom(segmentedControl.rx.selectedSegmentIndex)
             .map(Transaction.init)
@@ -176,12 +213,12 @@ class ListViewController: BaseViewController, View {
             .map { "지출: \($0.totalOutcome.currencyFormattedText)" }
             .bind(to: labelOutcome.rx.text)
             .disposed(by: disposeBag)
-        
+
         reactor.state
             .map { "수입: \($0.totalIncome.currencyFormattedText)" }
             .bind(to: labelIncome.rx.text)
             .disposed(by: disposeBag)
-        
+
         reactor.state
             .map { $0.totalIncome - $0.totalOutcome }
             .map { "합계: \($0.currencyFormattedText)" }
@@ -191,6 +228,11 @@ class ListViewController: BaseViewController, View {
         reactor.state
             .map { $0.isEmptyLabelHidden }
             .bind(to: labelEmpty.rx.isHidden)
+            .disposed(by: disposeBag)
+
+        reactor.state
+            .map { "\($0.year)년 \($0.month)월" }
+            .bind(to: labelCurrent.rx.text)
             .disposed(by: disposeBag)
     }
 
