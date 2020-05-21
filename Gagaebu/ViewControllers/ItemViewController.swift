@@ -13,10 +13,15 @@ import RxSwift
 import RxCocoa
 import RxOptional
 import RxGesture
+import RxKeyboard
 import SnapKit
 import Then
 
 class ItemViewController: BaseViewController, ReactorKit.View {
+    let scrollView = UIScrollView().then {
+        $0.alwaysBounceVertical = true
+        $0.clipsToBounds = false
+    }
     let segmentedControl = UISegmentedControl().then {
         $0.insertSegment(withTitle: Transaction.income.title, at: 0, animated: false)
         $0.insertSegment(withTitle: Transaction.outcome.title, at: 0, animated: false)
@@ -256,5 +261,12 @@ class ItemViewController: BaseViewController, ReactorKit.View {
             .map { $0.dateFormattedText }
             .bind(to: textFieldDate.rx.text)
             .disposed(by: disposeBag)
+        
+        RxKeyboard.instance.visibleHeight
+            .map { [unowned self] in $0 - self.view.safeAreaInsets.bottom }
+            .drive(onNext: { [unowned self] height in
+                self.scrollView.contentInset.bottom = height
+                self.scrollView.verticalScrollIndicatorInsets.bottom = height
+            }).disposed(by: disposeBag)
     }
 }
