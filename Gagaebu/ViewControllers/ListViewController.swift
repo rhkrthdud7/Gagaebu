@@ -40,8 +40,7 @@ class ListViewController: BaseViewController, View {
     }
     let addButton = UIBarButtonItem(title: "추가", style: .plain, target: self, action: nil)
     let header = UIView().then {
-        let width = UIScreen.main.bounds.width
-        $0.frame = CGRect(x: 0, y: 0, width: width, height: 150)
+        $0.backgroundColor = .clear
     }
     let segmentedControl = UISegmentedControl().then {
         $0.insertSegment(withTitle: Transaction.income.title, at: 0, animated: false)
@@ -109,12 +108,19 @@ class ListViewController: BaseViewController, View {
         labelTotal.snp.makeConstraints {
             $0.top.equalTo(labelIncome.snp.bottom).offset(10)
             $0.leading.trailing.equalTo(segmentedControl)
+            $0.bottom.equalToSuperview()
+        }
+        
+        header.snp.makeConstraints {
+            $0.centerX.width.equalToSuperview()
         }
         labelEmpty.snp.makeConstraints {
             $0.top.equalTo(header.snp.bottom)
             $0.leading.trailing.equalTo(header)
             $0.height.equalTo(200)
         }
+        header.setNeedsLayout()
+        header.layoutIfNeeded()
     }
 
     func bind(reactor: ListViewReactor) {
