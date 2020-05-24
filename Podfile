@@ -23,6 +23,10 @@ target 'Gagaebu' do
   pod 'URLNavigator', '~> 2.3.0'
 
   pod 'AcknowList', '~> 1.9.3'
+  
+  pod 'Firebase/Analytics', '~> 6.5.0'
+  pod 'Fabric', '~> 1.10.2'
+  pod 'Crashlytics', '~> 3.14.0'
 end
 
 target 'GagaebuTests' do

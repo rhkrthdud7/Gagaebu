@@ -3,11 +3,14 @@ platform :ios do
   desc 'Deploys Gagaebu to App Store'
   lane :release do
     match(
-     type: "appstore"
+      type: "appstore"
     )
     gym(
-     scheme: "Gagaebu",
-     clean: true
+      scheme: "Gagaebu",
+      clean: true
+    )
+    upload_symbols_to_crashlytics(
+      gsp_path: "./Gagaebu/App/GoogleService-Info.plist"
     )
     deliver(
       submit_for_review: true,

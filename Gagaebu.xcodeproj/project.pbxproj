@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D2D9F0712E560589F42FD90 /* Pods_Gagaebu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60E9062FA1A29F1B7B9FA537 /* Pods_Gagaebu.framework */; };
+		9C10C0332478ECF4001CE9B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C10C0322478ECF4001CE9B8 /* GoogleService-Info.plist */; };
 		9C16D724243836AF00F226AD /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16D723243836AF00F226AD /* Date+.swift */; };
 		9C16D72924383CF600F226AD /* BorderedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C16D72824383CF600F226AD /* BorderedTextField.swift */; };
 		9C2949AD244703F500604358 /* GagaebuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2949AC244703F500604358 /* GagaebuTests.swift */; };
@@ -61,6 +62,7 @@
 		0E40F9E371818118EAA07B26 /* Pods-Gagaebu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gagaebu.release.xcconfig"; path = "Target Support Files/Pods-Gagaebu/Pods-Gagaebu.release.xcconfig"; sourceTree = "<group>"; };
 		60E9062FA1A29F1B7B9FA537 /* Pods_Gagaebu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gagaebu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		867433BABBEC6F6B79CDB888 /* Pods-GagaebuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GagaebuTests.debug.xcconfig"; path = "Target Support Files/Pods-GagaebuTests/Pods-GagaebuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C10C0322478ECF4001CE9B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9C16D723243836AF00F226AD /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		9C16D72824383CF600F226AD /* BorderedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedTextField.swift; sourceTree = "<group>"; };
 		9C2949AA244703F500604358 /* GagaebuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GagaebuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -285,6 +287,7 @@
 				9CFA35FB2449E5BE001117FD /* AppInfo.swift */,
 				9CEDC7462425CA38006DD872 /* LaunchScreen.storyboard */,
 				9CEDC7492425CA38006DD872 /* Info.plist */,
+				9C10C0322478ECF4001CE9B8 /* GoogleService-Info.plist */,
 				9CC27668245075FD00C29ED1 /* Pods-Gagaebu-acknowledgements.plist */,
 			);
 			path = App;
@@ -331,6 +334,7 @@
 				9CEDC7352425CA37006DD872 /* Frameworks */,
 				9CEDC7362425CA37006DD872 /* Resources */,
 				EA495B574EAA28F58C079C39 /* [CP] Embed Pods Frameworks */,
+				9C10C0352478F85E001CE9B8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -417,6 +421,7 @@
 			files = (
 				9CC2766C2450773600C29ED1 /* Pods-Gagaebu-acknowledgements.plist in Resources */,
 				9C8FBC722441EB3000764E3A /* Colors.xcassets in Resources */,
+				9C10C0332478ECF4001CE9B8 /* GoogleService-Info.plist in Resources */,
 				9CEDC7482425CA38006DD872 /* LaunchScreen.storyboard in Resources */,
 				9CEDC7452425CA38006DD872 /* Assets.xcassets in Resources */,
 			);
@@ -492,6 +497,23 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		9C10C0352478F85E001CE9B8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"\n";
 		};
 		EA495B574EAA28F58C079C39 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -754,6 +776,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = PA8R36ZNU9;
 				INFOPLIST_FILE = Gagaebu/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
