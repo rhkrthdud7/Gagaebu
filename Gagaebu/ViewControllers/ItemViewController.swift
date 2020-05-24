@@ -262,6 +262,13 @@ class ItemViewController: BaseViewController, ReactorKit.View {
             .bind(to: textFieldDate.rx.text)
             .disposed(by: disposeBag)
         
+        NotificationCenter.default.rx.notification(UIDevice.orientationDidChangeNotification)
+            .subscribe(onNext: { [unowned self] _ in
+                self.textFieldDate.setNeedsDisplay()
+                self.textFieldTitle.setNeedsDisplay()
+                self.textFieldCost.setNeedsDisplay()
+            }).disposed(by: disposeBag)
+        
         RxKeyboard.instance.visibleHeight
             .map { [unowned self] in $0 - self.view.safeAreaInsets.bottom }
             .drive(onNext: { [unowned self] height in
