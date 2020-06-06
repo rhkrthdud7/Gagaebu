@@ -6,9 +6,7 @@ on:
 
 jobs:
   build:
-
     runs-on: macos-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Install Cocoapods
@@ -17,3 +15,13 @@ jobs:
       run: pod install
     - name: Build and run tests
       run: xcodebuild -workspace Gagaebu.xcworkspace -scheme GagaebuTests -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=13.4.1' test
+
+  swiftlint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub Action for SwiftLint
+        uses: norio-nomura/action-swiftlint@3.1.0
+        with:
+          args: --strict
+        env:
+          DIFF_BASE: ${{ github.base_ref }}
