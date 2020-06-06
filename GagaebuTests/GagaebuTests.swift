@@ -16,37 +16,38 @@ class GagaebuTests: XCTestCase {
     }
 
     override func tearDown() {
-        
+
     }
 
-    func testExample() {
-        testItemViewReactor()
-    }
-    
     func testItemViewReactor() {
         let itemService = ItemService()
         let reactor = ItemViewReactor(itemService: itemService, mode: .new(.outcome))
-        
+
         XCTAssertEqual(reactor.currentState.isDeleteButtonHidden, true)
-        
+
         XCTAssertEqual(reactor.currentState.isSubmitButtonEnabled, false)
-        
+
         let title = "This is a test"
         reactor.action.onNext(.updateTitle(title))
         XCTAssertEqual(reactor.currentState.itemTitle, title)
-        
+
         reactor.action.onNext(.updateCost("0000010"))
         XCTAssertEqual(reactor.currentState.itemCost, 10)
-        
+
         let date = Date()
         reactor.action.onNext(.updateDate(date))
         XCTAssertEqual(reactor.currentState.itemDate, date)
     }
 
-    func testPerformanceExample() {
-        measure {
-            
-        }
+    func testListViewReactor() {
+        let itemService = ItemService()
+        let reactor = ListViewReactor(itemService: itemService)
+
+        reactor.action.onNext(.refresh(.income))
+        XCTAssertEqual(reactor.currentState.transaction, Transaction.income)
+
+        reactor.action.onNext(.refresh(.outcome))
+        XCTAssertEqual(reactor.currentState.transaction, Transaction.outcome)
     }
 
 }

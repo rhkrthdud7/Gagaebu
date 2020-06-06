@@ -31,4 +31,5 @@ end
 
 target 'GagaebuTests' do
   pod 'ReactorKit', '~> 2.0.1'
+  pod 'Firebase/Analytics', '~> 6.5.0'
 end
